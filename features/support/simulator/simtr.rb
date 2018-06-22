@@ -3,7 +3,7 @@ class SimTR
   attr_accessor :app_conf_file, :digest_url_without_rkey
 
   def initialize(
-    app_conf_file='/Users/jackzones/unosys/simutator/unotr/conf/app.conf',
+    app_conf_file='/home/arthur/unotr/conf/app.conf',
     digest_url_without_rkey='http://192.168.13.54:8088/sbi/cwmp/digest'
   )
     @app_conf_file = app_conf_file
@@ -28,12 +28,13 @@ class SimTR
   end
 
   def stop_simtr
-    `pkill -9 unotr`
+    # `pkill -9 unotr`
+    `echo op[]=-09 | sudo -S systemctl stop unotr`
   end
 
   def start_simtr
     # `/Users/jackzones/unosys/simutator/unotr/unotr`
-    nil
+    `echo op[]=-09 | sudo -S systemctl start unotr`
     # `cd /Users/jackzones/unosys/simutator/unotr`
     # `./unotr`
   end
@@ -57,7 +58,7 @@ class SimTR
       file.each_line do |line|
         s += line.match(/^presentationConfig=(.*)/)[1] if line.match(/^presentationConfig=(.*)/)
       end
-      s
+      s =~ %r{^lib/dmt} ? s = self.app_conf_file.split('conf/app.conf')[0] + s : s
     end
   end
 
