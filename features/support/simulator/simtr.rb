@@ -1,0 +1,75 @@
+class SimTR
+
+  attr_accessor :app_conf_file, :digest_url_without_rkey
+
+  def initialize(
+    app_conf_file='/Users/jackzones/unosys/simutator/unotr/conf/app.conf',
+    digest_url_without_rkey='http://192.168.13.54:8088/sbi/cwmp/digest'
+  )
+    @app_conf_file = app_conf_file
+    @digest_url_without_rkey = digest_url_without_rkey
+  end
+
+  def input(filename,s)
+    File.open(filename,'w+') do |file|
+      file.write s
+    end
+  end
+
+  def output(filename,reg,sub_str)
+    s = ""
+    File.open(filename,'r+') do |file|
+      file.each_line do |line|
+        line = line.gsub(reg, sub_str)
+        s += line
+      end
+    end
+    s
+  end
+
+  def stop_simtr
+    `pkill -9 unotr`
+  end
+
+  def start_simtr
+    # `/Users/jackzones/unosys/simutator/unotr/unotr`
+    nil
+    # `cd /Users/jackzones/unosys/simutator/unotr`
+    # `./unotr`
+  end
+
+  def modify_sn(sn)
+    filename = @app_conf_file
+    self.input(filename,self.output(filename,/serialNumberFrom=.*/, "serialNumberFrom=#{sn.to_i}"))
+    self.input(filename,self.output(filename,/serialNumberTo=.*/, "serialNumberto=#{sn.to_i}"))
+  end
+
+  def device_register(serial_number)
+    self.stop_simtr
+    self.modify_sn(serial_number)
+    self.start_simtr
+  end
+
+  def data_model_path
+    filename = @app_conf_file
+    File.open(filename, 'r+') do |file|
+      s = ''
+      file.each_line do |line|
+        s += line.match(/^presentationConfig=(.*)/)[1] if line.match(/^presentationConfig=(.*)/)
+      end
+      s
+    end
+  end
+
+  def set_acs_info(url, username, password)
+    data_model_file = self.data_model_path
+    self.input(data_model_file,self.output(data_model_file,/<URL writable="true" pattern="http">.*<\/URL>/, "<URL writable=\"true\" pattern=\"http\">#{url}</URL>"))
+    self.input(data_model_file,self.output(data_model_file,/<Username writable="true">.*<\/Username>/, "<Username writable=\"true\">#{username}</Username>"))
+    self.input(data_model_file,self.output(data_model_file,/<Password writable="true" password="true">.*<\/Password>/, "<Password writable=\"true\" password=\"true\">#{password}</Password>"))
+  end
+
+  def modify_oui(oui)
+    data_model_file = self.data_model_path
+    self.input(data_model_file,self.output(data_model_file,/<ManufacturerOUI>(.*)<\/ManufacturerOUI>/, "<ManufacturerOUI>#{oui}</ManufacturerOUI>"))
+  end
+end
