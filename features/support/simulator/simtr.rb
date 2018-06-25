@@ -4,8 +4,8 @@ class SimTR
 
   def initialize(
     app_conf_file='/home/arthur/unotr/conf/app.conf',
-    digest_url_without_rkey='http://192.168.13.54:8088/sbi/cwmp/digest',
-    license_file = "/Users/jackzones/Wing/unoms_web_testing/features/support/others/auto_CWMP.lic"
+    digest_url_without_rkey='http://127.0.0.1/sbi/cwmp/digest',
+    license_file = "/home/arthur/Documents/unoms_web_testing/features/support/others/ubuntu_auto_CWMP.lic"
   )
     @app_conf_file = app_conf_file
     @digest_url_without_rkey = digest_url_without_rkey
@@ -38,7 +38,7 @@ class SimTR
   def start
     # `/Users/jackzones/unosys/simutator/unotr/unotr`
     # `echo op[]=-09 | sudo -S systemctl start unotr`
-    system("echo op[]=-09 | sudo -S systemctl stop unotr", :out => File::NULL)
+    system("echo op[]=-09 | sudo -S systemctl start unotr", :out => File::NULL)
     # `cd /Users/jackzones/unosys/simutator/unotr`
     # `./unotr`
   end

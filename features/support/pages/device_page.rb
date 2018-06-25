@@ -56,6 +56,8 @@ class DevicePage
 	text_field(:detect_password, id: 'password', frame: iframe)
 	text_field(:detect_device_name, id: 'name', frame: iframe)
 	text_field(:detect_subscriber_id, id: 'subscriber_id', frame: iframe)
+
+	div(:page_footer, class: 'w2ui-footer-right', frame: iframe)
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象

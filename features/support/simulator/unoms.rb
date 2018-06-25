@@ -4,7 +4,7 @@ class UnoMS
   #
   # def initialize(
   #   app_conf_file='/home/arthur/unotr/conf/app.conf',
-  #   digest_url_without_rkey='http://192.168.13.54:8088/sbi/cwmp/digest',
+  #   digest_url_without_rkey='http://127.0.0.1/sbi/cwmp/digest',
   #   license_file = "/Users/jackzones/Wing/unoms_web_testing/features/support/others/auto_CWMP.lic"
   # )
   #   @app_conf_file = app_conf_file
