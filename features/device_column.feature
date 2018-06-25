@@ -2,7 +2,7 @@ Feature: Device Column
 
 
 Background:
-	Given I am on the homepage
+	Given 用户root登录英文系统
 	And I click the SUBSCRIPTION
 	And I click the Device
 

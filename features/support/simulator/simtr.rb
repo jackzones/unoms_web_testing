@@ -1,13 +1,15 @@
 class SimTR
 
-  attr_accessor :app_conf_file, :digest_url_without_rkey
+  attr_accessor :app_conf_file, :digest_url_without_rkey, :license_file
 
   def initialize(
     app_conf_file='/home/arthur/unotr/conf/app.conf',
-    digest_url_without_rkey='http://192.168.13.54:8088/sbi/cwmp/digest'
+    digest_url_without_rkey='http://192.168.13.54:8088/sbi/cwmp/digest',
+    license_file = "/Users/jackzones/Wing/unoms_web_testing/features/support/others/auto_CWMP.lic"
   )
     @app_conf_file = app_conf_file
     @digest_url_without_rkey = digest_url_without_rkey
+    @license_file = license_file
   end
 
   def input(filename,s)
@@ -27,12 +29,12 @@ class SimTR
     s
   end
 
-  def stop_simtr
+  def stop
     # `pkill -9 unotr`
     `echo op[]=-09 | sudo -S systemctl stop unotr`
   end
 
-  def start_simtr
+  def start
     # `/Users/jackzones/unosys/simutator/unotr/unotr`
     `echo op[]=-09 | sudo -S systemctl start unotr`
     # `cd /Users/jackzones/unosys/simutator/unotr`
@@ -46,9 +48,9 @@ class SimTR
   end
 
   def device_register(serial_number)
-    self.stop_simtr
+    self.stop
     self.modify_sn(serial_number)
-    self.start_simtr
+    self.start
   end
 
   def data_model_path

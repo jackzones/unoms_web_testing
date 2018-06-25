@@ -1,0 +1,19 @@
+= Plan
+== 20180622
+
+* gem mongo 操作数据库
+* before action
+** 清空数据库 hook
+** 初始化数据库 hook
+** 导入license，license放在下创建一个文件夹 background
+
+* 清空数据库
+client = Mongo::Client.new('mongodb://127.0.0.1:27017/unoms')
+client.database.drop
+
+* 初始化数据库
+mongo < init.js
+
+* license
+Given 用户root登录英文系统
+When 导入TR系统license
