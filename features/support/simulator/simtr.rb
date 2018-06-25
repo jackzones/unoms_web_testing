@@ -31,12 +31,14 @@ class SimTR
 
   def stop
     # `pkill -9 unotr`
-    `echo op[]=-09 | sudo -S systemctl stop unotr`
+    # `echo op[]=-09 | sudo -S systemctl stop unotr`
+    system("echo op[]=-09 | sudo -S systemctl stop unotr", :out => File::NULL)
   end
 
   def start
     # `/Users/jackzones/unosys/simutator/unotr/unotr`
-    `echo op[]=-09 | sudo -S systemctl start unotr`
+    # `echo op[]=-09 | sudo -S systemctl start unotr`
+    system("echo op[]=-09 | sudo -S systemctl stop unotr", :out => File::NULL)
     # `cd /Users/jackzones/unosys/simutator/unotr`
     # `./unotr`
   end

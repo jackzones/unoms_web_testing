@@ -5,9 +5,9 @@ Feature: 设备注册
 # 	And I click the SUBSCRIPTION
 # 	And I click the Device
 	Background:
+		# Given 用户root登录英文系统
+		# And 导入TR系统license
 		Given 用户root登录英文系统
-		And 导入TR系统license
-		And 用户root登录英文系统
 		And I click the SUBSCRIPTION
 		And I click the Device
 
@@ -15,7 +15,7 @@ Feature: 设备注册
 			When 添加一个设备，名字为'auto_test0'，序列号为'000000000100'，协议为'CWMP'
 			And 让序列号为'000000000100'的设备上线
 			And 点击设备界面的刷新按钮
-			Then 名字为'auto_test1'的设备变为在线状态
+			Then 名字为'auto_test0'的设备变为在线状态
 
 		Scenario: 探测方式使设备上线
 			When 点击探测按钮，弹出探测窗口

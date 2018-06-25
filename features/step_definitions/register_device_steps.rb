@@ -64,6 +64,6 @@ When /^修改URL为digest认证并且不带rkey，Username和password使用'(.*)
 	@simtr.set_acs_info(@simtr.digest_url_without_rkey, username, username)
 end
 
-Given /^导入TR系统license$/ do
-	on_page(LoginLicensePage).import_license_file(@simtr.license_file)
-end
+# Given /^导入TR系统license$/ do
+# 	on_page(LoginLicensePage).import_license_file(@simtr.license_file)
+# end

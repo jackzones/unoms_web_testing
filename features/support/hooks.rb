@@ -15,10 +15,14 @@ Before do
   system("mongo < './features/support/others/init.js'", :out => File::NULL)
   # binding.pry
   @unoms.start
+  sleep 1
   @browser = Watir::Browser.new :chrome
   @simtr = SimTR.new()
+  #登录系统，导入license
+  visit_page(LoginPage)
+  visit_page(LoginPage).login_with('en_us', 'root', '123456')
+  on_page(LoginLicensePage).import_license_file(@simtr.license_file)
 end
-
 
 After do
   @browser.close
