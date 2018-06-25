@@ -1,7 +1,7 @@
 class LoginPage
 	include PageObject
 
-	page_url 'http://192.168.13.54:8088/static/unoms.html#'
+	page_url 'http://192.168.13.54:8088/'
 
 	text_field(:username, id: 'login_username')
 	text_field(:password, id: 'login_password')
