@@ -9,8 +9,8 @@ When /^让序列号为'(\d+)'的设备上线$/ do |serial_number|
 end
 
 When /^点击设备界面的刷新按钮$/ do
+	sleep 1
 	on_page(DevicePage).click_reload_icon
-	on_page(DevicePage).page_footer_element.wait_until_present
 end
 
 Then /^名字为'(.*)'的设备变为在线状态$/ do |device_name|
