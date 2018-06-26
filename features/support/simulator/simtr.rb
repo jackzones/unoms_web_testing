@@ -46,7 +46,7 @@ class SimTR
   def modify_sn(sn)
     filename = @app_conf_file
     self.input(filename,self.output(filename,/serialNumberFrom=.*/, "serialNumberFrom=#{sn.to_i}"))
-    self.input(filename,self.output(filename,/serialNumberTo=.*/, "serialNumberto=#{sn.to_i}"))
+    self.input(filename,self.output(filename,/serialNumberTo=.*/, "serialNumberTo=#{sn.to_i}"))
   end
 
   def device_register(serial_number)
