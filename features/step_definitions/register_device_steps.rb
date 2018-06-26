@@ -36,7 +36,7 @@ end
 
 Then /^探测到设备，编辑设备名为'(.*)'，点击保存按钮$/ do |sn|
 	on_page(DevicePage).detect_add(sn)
-	sleep 1
+	sleep 2
 end
 
 When /^点击系统下的设置菜单$/ do
