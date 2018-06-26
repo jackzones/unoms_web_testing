@@ -53,6 +53,7 @@ class SimTR
     self.stop
     self.modify_sn(serial_number)
     self.start
+    sleep 1
   end
 
   def data_model_path
