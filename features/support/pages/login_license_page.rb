@@ -12,7 +12,7 @@ class LoginLicensePage
       self.license_file_form = file_path
       self.save_form
       self.yes_confirm_element.wait_until_present.click
-      sleep 1
+      # sleep 1
     end
 
 end

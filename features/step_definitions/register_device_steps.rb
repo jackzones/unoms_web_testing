@@ -9,7 +9,7 @@ When /^让序列号为'(\d+)'的设备上线$/ do |serial_number|
 end
 
 When /^点击设备界面的刷新按钮$/ do
-	sleep 1
+	# sleep 1
 	on_page(DevicePage).click_reload_icon
 end
 
