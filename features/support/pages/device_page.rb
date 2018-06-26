@@ -100,6 +100,7 @@ class DevicePage
 
 	#device list 分两个table，找到第一个表row_index和第二个表td的class的关系，减2
 	def online?(device_name)
+		self.page_footer_element.wait_until_present
 		row_index = self.iframe(index: 1).div(id: 'grid_device_frecords').tr(text: /#{device_name}/).rowindex
 		status = self.iframe(index: 1).div(id: 'grid_device_records').table.td(id: "grid_device_data_#{row_index - 2}_11").span.attribute_value('class')
 		status == "w2ui-icon-check" ? true : false
