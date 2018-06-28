@@ -2,4 +2,12 @@ require 'rspec'
 require 'page-object'
 
 World(PageObject::PageFactory)
-# Capybara.javascript_driver = :webkit
+
+if ENV['HEADLESS']
+  require 'headless'
+  headless = Headless.new
+  headless.start
+  at_exit do
+    headless.destroy
+  end
+end

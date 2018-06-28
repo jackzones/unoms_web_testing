@@ -38,7 +38,6 @@ end
 Then /^the serial_number_column exists$/ do
 	# sleep 2
 	on_page(DevicePage).serial_number_column_element.present?.should be_truthy
-
 end
 
 Then /^the oui_column exists$/ do
