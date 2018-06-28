@@ -3,7 +3,7 @@ require 'page-object'
 
 World(PageObject::PageFactory)
 
-if ENV['HEADLESS']
+if ENV['HEADLESS'] == 'true'
   require 'headless'
   headless = Headless.new
   headless.start
