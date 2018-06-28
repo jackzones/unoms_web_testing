@@ -17,3 +17,16 @@ mongo < init.js
 * license
 Given 用户root登录英文系统
 When 导入TR系统license
+
+* 清空数据库太耗时，选择删除除了license之外的所有collection的数据。
+** 找到所有collection
+** 删除除license之外的所有collection的数据
+
+script
+
+// script db.script.find({"built_in" : true}) 內建的74个，不删除
+permission  不删除
+license 不删除
+// user "username" : "root" 不删除
+grid_state 不删除
+settings 不删除，设置"auto_mount" : false
