@@ -25,12 +25,23 @@ Before do
   # on_page(LoginLicensePage).import_license_file(@simtr.license_file)
 end
 
-After do
+# After do
+#   @browser.close
+#   @simtr.stop
+# end
+
+After do |scenario|
+  if scenario.respond_to?('scenario_outline') then
+      scenario = scenario.scenario_outline
+  end
+  if scenario.failed?
+     filename = "error-#{@current_page.class}-#{Time.now}.png"
+     @current_page.save_screenshot(filename)
+     embed(filename, 'image/png')
+  end
   @browser.close
   @simtr.stop
 end
-
-
 
 # After( '@developing' ) do |scenario|
 #   binding.pry if scenario.failed?
