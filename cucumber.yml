@@ -1,1 +1,3 @@
-default: --no-source --color --format pretty
+default: --profile html_report
+html_report: --format progress --format html --out=features_report.html HEADLESS=true
+test: --tags @test

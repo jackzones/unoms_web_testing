@@ -20,7 +20,7 @@ Feature: 设备注册
 			And 让序列号为'000000000101'的设备上线
 			Then 探测到设备，编辑设备名为'auto_test1'，点击保存按钮
 			And 点击设备界面的刷新按钮
-			Then 名字为'auto_test2'的设备变为在线状态
+			Then 名字为'auto_test1'的设备变为在线状态
 
 
 		Scenario: Auto mount方式设备注册
