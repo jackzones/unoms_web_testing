@@ -1,25 +1,3 @@
-
-Given /^用户root登录英文系统$/ do
-	# visit_page(LoginPage)
-	visit_page(LoginPage).login_with('en_us', 'root', '123456')
-end
-
-
-Given /^I click the SUBSCRIPTION$/ do
-	on_page(HomePage).menu_subscription_element.wait_until_present.click
-end
-
-Given /^I click the Device$/ do
-	on_page(HomePage).menu_device_element.wait_until_present.click
-	on_page(DevicePage).reload_icon_element.wait_until_present
-	on_page(DevicePage).click_reload_icon
-end
-
-# When /^click show_column_icon_element$/ do
-# 	on_page(DevicePage).show_column_icon_element.wait_until_present
-# 	on_page(DevicePage).show_column_icon_element.click
-# end
-
 When /^click the icon of show and hide column$/ do
 	on_page(DevicePage).click_show_column_icon
 end
@@ -60,4 +38,39 @@ end
 
 Then /^I will see the (.*)$/ do |message|
 	on_page(DevicePage).iframe_text.should include message
+end
+
+When /^添加一个设备，名字为'(.*)'，序列号为'(\d+)'，协议为'(\w+)'$/ do |device_name, serial_number, protocol|
+	on_page(DevicePage).add_device(device_name, serial_number, protocol)
+end
+
+When /^点击设备界面的刷新按钮$/ do
+	# sleep 1
+	on_page(DevicePage).click_reload_icon
+end
+
+Then /^名字为'(.*)'的设备变为在线状态$/ do |device_name|
+	on_page(DevicePage).online?(device_name).should be_truthy
+	# binding.pry
+end
+
+When /^点击探测按钮，弹出探测窗口$/ do
+	on_page(DevicePage).click_detect_icon
+end
+
+When /^点击http，digest认证$/ do
+	on_page(DevicePage).digest_button
+end
+
+When /^复制URL，Username，Password到simulator$/ do
+	on_page(DevicePage).set_acs_info
+end
+
+When /^点击下一步，进入探测界面$/ do
+	on_page(DevicePage).detect_next
+end
+
+Then /^探测到设备，编辑设备名为'(.*)'，点击保存按钮$/ do |sn|
+	on_page(DevicePage).detect_add(sn)
+	sleep 2
 end

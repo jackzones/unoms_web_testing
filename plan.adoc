@@ -1,32 +1,36 @@
 = Plan
 == 20180622
 
-* gem mongo 操作数据库
-* before action
-** 清空数据库 hook
-** 初始化数据库 hook
-** 导入license，license放在下创建一个文件夹 background
+// * gem mongo 操作数据库
+// * before action
+// ** 清空数据库 hook
+// ** 初始化数据库 hook
+// ** 导入license，license放在下创建一个文件夹 background
 
-* 清空数据库
-client = Mongo::Client.new('mongodb://127.0.0.1:27017/unoms')
-client.database.drop
+// * 清空数据库
+// client = Mongo::Client.new('mongodb://127.0.0.1:27017/unoms')
+// client.database.drop
 
-* 初始化数据库
-mongo < init.js
+// * 初始化数据库
+// mongo < init.js
 
-* license
-Given 用户root登录英文系统
-When 导入TR系统license
+// * license
+// Given 用户root登录英文系统
+// When 导入TR系统license
 
-* 清空数据库太耗时，选择删除除了license之外的所有collection的数据。
-** 找到所有collection
-** 删除除license之外的所有collection的数据
+// * 清空数据库太耗时，选择删除除了license之外的所有collection的数据。
+// ** 找到所有collection
+// ** 删除除license之外的所有collection的数据
 
-script
+// script
 
-// script db.script.find({"built_in" : true}) 內建的74个，不删除
-permission  不删除
-license 不删除
-// user "username" : "root" 不删除
-grid_state 不删除
-settings 不删除，设置"auto_mount" : false
+// // script db.script.find({"built_in" : true}) 內建的74个，不删除
+// permission  不删除
+// license 不删除
+// // user "username" : "root" 不删除
+// grid_state 不删除
+// settings 不删除，设置"auto_mount" : false
+
+// * 失败截图，html报告能查看截图。
+* 将sim里的变量，使用其他方法，当做配置来实现。factory_bot
+* 是否需要使用ActiveRecord连接数据库

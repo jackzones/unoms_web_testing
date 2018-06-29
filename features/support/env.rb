@@ -2,6 +2,7 @@ require 'rspec'
 require 'page-object'
 
 World(PageObject::PageFactory)
+World(FactoryBot::Syntax::Methods)
 
 if ENV['HEADLESS'] == 'true'
   require 'headless'

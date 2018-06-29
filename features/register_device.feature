@@ -2,8 +2,8 @@ Feature: 设备注册
 
 	Background:
 		Given 用户root登录英文系统
-		And I click the SUBSCRIPTION
-		And I click the Device
+		And 点击SUBSCRIPTION菜单
+		And 点击Device菜单
 
 		Scenario: 手动添加设备，设备注册
 			When 添加一个设备，名字为'auto_test0'，序列号为'000000000100'，协议为'CWMP'
@@ -31,15 +31,15 @@ Feature: 设备注册
 			And 设备修改OUI为'123457'
 			And 修改URL为digest认证并且不带rkey，Username和password使用'unoms'
 			And 让序列号为'000000000102'的设备上线
-			And I click the Device
+			And 点击Device菜单
 			Then 名字为'123457-000000000102'的设备变为在线状态
 
 		# Background:
 		# 	Given 用户root登录英文系统
 		# 	And 导入TR系统license
 		# 	And 用户root登录英文系统
-		# 	And I click the SUBSCRIPTION
-		# 	And I click the Device
+		# 	And 点击SUBSCRIPTION菜单
+		# 	And 点击Device菜单
 		#
 		# 	@test
 		# 	Scenario: 探测方式使设备上线
