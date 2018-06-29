@@ -1,12 +1,6 @@
 Feature: 设备注册
 
-# Background:
-# 	Given 用户root登录英文系统
-# 	And I click the SUBSCRIPTION
-# 	And I click the Device
 	Background:
-		# Given 用户root登录英文系统
-		# And 导入TR系统license
 		Given 用户root登录英文系统
 		And I click the SUBSCRIPTION
 		And I click the Device
@@ -17,6 +11,7 @@ Feature: 设备注册
 			And 点击设备界面的刷新按钮
 			Then 名字为'auto_test0'的设备变为在线状态
 
+			@test
 		Scenario: 探测方式使设备上线
 			When 点击探测按钮，弹出探测窗口
 			And 点击http，digest认证
@@ -25,7 +20,7 @@ Feature: 设备注册
 			And 让序列号为'000000000101'的设备上线
 			Then 探测到设备，编辑设备名为'auto_test1'，点击保存按钮
 			And 点击设备界面的刷新按钮
-			Then 名字为'auto_test1'的设备变为在线状态
+			Then 名字为'auto_test2'的设备变为在线状态
 
 
 		Scenario: Auto mount方式设备注册
