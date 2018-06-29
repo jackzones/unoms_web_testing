@@ -30,7 +30,7 @@ After do |scenario|
       scenario = scenario.scenario_outline
   end
   if scenario.failed?
-     filename = "error-#{@current_page.class}-#{Time.now}.png"
+     filename = "error_#{@current_page.class}_#{Time.now.strftime("%Y%m%d_%H%M%S")}.png"
      @current_page.save_screenshot("screenshots/#{filename}")
      embed("screenshots/#{filename}", 'image/png')
   end
