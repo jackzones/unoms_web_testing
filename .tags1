@@ -4,6 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-UserPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^class UserPage$/;"	class	line:1
-click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def self.click(name)$/;"	singleton method	line:21
-add_admin	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def add_admin(data = {})$/;"	method	line:34
+user1	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^user1:$/;"	function	line:2
+username_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  username_form: test_user$/;"	function	line:3
+password_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  password_form: 123456$/;"	function	line:4
+retype_password_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  retype_password_form: 123456$/;"	function	line:5
+email_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  email_form: ~email_address$/;"	function	line:6

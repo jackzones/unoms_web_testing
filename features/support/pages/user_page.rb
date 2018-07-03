@@ -35,11 +35,7 @@ class UserPage
 		data = data_for(:user1, data)
 	  click_add_new_icon
 		save_form_element.wait_until_present
-		self.username_form = data['username']
-		self.password_form = data['password']
-		self.retype_password_form = data['password']
-		self.oui_form = data['oui']
-		self.email_form = data['email']
+		populate_page_with data
 		check_administrator_form
 		save_form
 	end

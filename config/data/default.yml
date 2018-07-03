@@ -1,5 +1,6 @@
 
 user1:
-  username: test_user
-  password: 123456
-  email: ~email_address
+  username_form: test_user
+  password_form: 123456
+  retype_password_form: 123456
+  email_form: ~email_address

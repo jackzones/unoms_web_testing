@@ -27,10 +27,11 @@ add_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device
 online?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def online?(device_name)$/;"	method	line:102
 set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def set_acs_info$/;"	method	line:109
 detect_add	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def detect_add(sn, s_id= '')$/;"	method	line:117
-user1	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^user1:$/;"	function	line:2
-username	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  username: test_user$/;"	function	line:3
-password	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  password: 123456$/;"	function	line:4
-email	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  email: ~email_address$/;"	function	line:5
 UserPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^class UserPage$/;"	class	line:1
 click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def self.click(name)$/;"	singleton method	line:21
 add_admin	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def add_admin(data = {})$/;"	method	line:34
+user1	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^user1:$/;"	function	line:2
+username_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  username_form: test_user$/;"	function	line:3
+password_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  password_form: 123456$/;"	function	line:4
+retype_password_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  retype_password_form: 123456$/;"	function	line:5
+email_form	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  email_form: ~email_address$/;"	function	line:6
