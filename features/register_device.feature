@@ -2,9 +2,9 @@ Feature: 设备注册
 
 	Background:
 		Given 用户root登录英文系统
-		And 进入Device界面
 
 		Scenario: 手动添加设备，设备注册
+			And 进入Device界面
 			When 添加一个设备，名字为'auto_test0'，序列号为'000000000100'，协议为'CWMP'
 			And 让序列号为'000000000100'的设备上线
 			And 点击设备界面的刷新按钮
@@ -12,6 +12,7 @@ Feature: 设备注册
 
 
 		Scenario: 探测方式使设备上线
+			And 进入Device界面
 			When 点击探测按钮，弹出探测窗口
 			And 点击http，digest认证
 			And 复制URL，Username，Password到simulator，点击下一步，进入探测界面
@@ -29,7 +30,7 @@ Feature: 设备注册
 			And 设备修改OUI为'123457'
 			And 修改URL为digest认证并且不带rkey，Username和password使用'unoms'
 			And 让序列号为'000000000102'的设备上线
-			And 切换到Device界面
+			And 进入Device界面
 			Then 名字为'123457-000000000102'的设备变为在线状态
 
 		# Background:

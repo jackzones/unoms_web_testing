@@ -4,7 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-auto_mount_user	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^auto_mount_user:$/;"	function	line:2
-username	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  username: auto_user$/;"	function	line:3
-password	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  password: 123456$/;"	function	line:4
-email	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  email: ~email_address$/;"	function	line:5
