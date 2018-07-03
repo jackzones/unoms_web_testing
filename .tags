@@ -29,9 +29,8 @@ set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/
 modify_oui	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_oui(oui)$/;"	method	line:77	class:SimTR
 auto_mount_user	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^auto_mount_user:$/;"	function	line:2
 username	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  username: auto_user$/;"	function	line:3
-password	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  password: 12345$/;"	function	line:4
-oui	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  oui:$/;"	function	line:5
-email	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  email: xurenjie232@163.co$/;"	function	line:6
+password	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  password: 123456$/;"	function	line:4
+email	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  email: xurenjie232@163.com$/;"	function	line:5
 UserPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^class UserPage$/;"	class	line:1
 click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def self.click(name)$/;"	singleton method	line:29
 add_admin	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def add_admin(data = {})$/;"	method	line:42

@@ -43,11 +43,11 @@ class UserPage
 		data = data_for(:auto_mount_user, data)
 	  click_add_new_icon
 		save_form_element.wait_until_present
-		self.username_form = data[:username]
-		self.password_form = data[:password]
-		self.retype_password_form = data[:password]
-		self.oui_form = data[:oui]
-		self.email_form = data[:email]
+		self.username_form = data['username']
+		self.password_form = data['password']
+		self.retype_password_form = data['password']
+		self.oui_form = data['oui']
+		self.email_form = data['email']
 		check_administrator_form
 		save_form
 	end
