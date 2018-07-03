@@ -1,0 +1,6 @@
+
+auto_mount_user:
+  username: 'auto_user1',
+  password: '123456',
+  oui:  '',
+  email: 'xurenjie232@163.com'

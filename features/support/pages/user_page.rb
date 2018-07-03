@@ -1,13 +1,14 @@
 class UserPage
 	include PageObject
 	include MainHelper
+	include DataMagic
 
-	DEFAULT_DATA = {
-		username: 'auto_user1',
-		password: '123456',
-		oui:  '',
-		email: 'xurenjie232@163.com'
-	}
+	# DEFAULT_DATA = {
+	# 	username: 'auto_user1',
+	# 	password: '123456',
+	# 	oui:  '',
+	# 	email: 'xurenjie232@163.com'
+	# }
 
 
 	in_iframe(css: 'div[id="menu_user_tab_content"] iframe') do |iframe|
@@ -39,7 +40,7 @@ class UserPage
 	click :click_reload_icon
 
 	def add_admin(data = {})
-		data = DEFAULT_DATA.merge(data)
+		data = DataMagic.data_for(:auto_mount_user, data)
 	  click_add_new_icon
 		save_form_element.wait_until_present
 		self.username_form = data[:username]
