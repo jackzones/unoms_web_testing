@@ -4,3 +4,4 @@ user1:
   password_form: 123456
   retype_password_form: 123456
   email_form: ~email_address
+  administrator_form: true
