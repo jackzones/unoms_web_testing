@@ -9,7 +9,7 @@ gem 'pry', '0.10.4'
 gem 'mongo', '2.5.1'
 # gem 'capybara-webkit', '1.11.1'
 gem 'headless', '~> 2.2', '>= 2.2.3'
-
+gem 'data_magic', '~> 0.21'
 # group :test do
 #   gem 'database_cleaner', '1.7.0'
 # end

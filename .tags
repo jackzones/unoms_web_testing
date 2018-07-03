@@ -16,9 +16,6 @@ LoginLicensePage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/
 import_license_file	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/login_license_page.rb	/^    def import_license_file(file_path)$/;"	method	line:10
 SettingsPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/settings_page.rb	/^class SettingsPage$/;"	class	line:1
 set_auto_mount	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/settings_page.rb	/^	def set_auto_mount(checked)$/;"	method	line:9
-UserPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^class UserPage$/;"	class	line:1
-click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def self.click(name)$/;"	singleton method	line:20
-add_admin	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def add_admin(username, oui, password = '123456')$/;"	method	line:33
 SimTR	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^class SimTR$/;"	class	line:1
 initialize	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def initialize($/;"	method	line:5	class:SimTR
 input	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def input(filename,s)$/;"	method	line:15	class:SimTR
@@ -30,3 +27,6 @@ device_register	/Users/jackzones/Wing/unoms_web_testing/features/support/simulat
 data_model_path	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def data_model_path$/;"	method	line:59	class:SimTR
 set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def set_acs_info(url, username, password)$/;"	method	line:70	class:SimTR
 modify_oui	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_oui(oui)$/;"	method	line:77	class:SimTR
+UserPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^class UserPage$/;"	class	line:1
+click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def self.click(name)$/;"	singleton method	line:28
+add_admin	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def add_admin(data = {})$/;"	method	line:41

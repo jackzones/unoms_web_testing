@@ -10,7 +10,7 @@ Feature: 设备注册
 			And 点击设备界面的刷新按钮
 			Then 名字为'auto_test0'的设备变为在线状态
 
-			@test
+
 		Scenario: 探测方式使设备上线
 			When 点击探测按钮，弹出探测窗口
 			And 点击http，digest认证
@@ -20,11 +20,12 @@ Feature: 设备注册
 			And 点击设备界面的刷新按钮
 			Then 名字为'auto_test1'的设备变为在线状态
 
+		@test
 		Scenario: Auto mount方式设备注册
 			When 切换到设置界面
 			And 开启Auto Mount功能
 			And 切换到用户界面
-			And 添加OUI为'123457'的管理员用户'auto_123457'
+			And 添加OUI为'123457'的管理员用户
 			And 设备修改OUI为'123457'
 			And 修改URL为digest认证并且不带rkey，Username和password使用'unoms'
 			And 让序列号为'000000000102'的设备上线

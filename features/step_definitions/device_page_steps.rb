@@ -2,12 +2,12 @@ When /^click the icon of show and hide column$/ do
 	on_page(DevicePage).click_show_column_icon
 end
 
-When /^click the label of (.*)$/ do |click|
+When /^click the label of (.+)$/ do |click|
 	on_page(DevicePage).send click.to_sym
 	# binding.pry
 end
 
-Then /^the (.*) disapper$/ do |element|
+Then /^the (.+) disapper$/ do |element|
 	(on_page(DevicePage).send element.to_sym).exists?.should be_falsey
 
 	# on_page(DevicePage).subscriber_name_column_element.present?.should be_falsey
@@ -31,16 +31,16 @@ Then /^show the text "([^\"]*)"$/ do |excepted|
 	on_page(DevicePage).iframe_text.should include excepted
 end
 
-When /^hover the mouse on the (.*)$/ do |tool_menu|
+When /^hover the mouse on the (.+)$/ do |tool_menu|
 	# on_page(DevicePage).tool_menu.to_s.hover
 	(on_page(DevicePage).send tool_menu.to_sym).hover
 end
 
-Then /^I will see the (.*)$/ do |message|
+Then /^I will see the (.+)$/ do |message|
 	on_page(DevicePage).iframe_text.should include message
 end
 
-When /^添加一个设备，名字为'(.*)'，序列号为'(\d+)'，协议为'(\w+)'$/ do |device_name, serial_number, protocol|
+When /^添加一个设备，名字为'(.+)'，序列号为'(\d+)'，协议为'(\w+)'$/ do |device_name, serial_number, protocol|
 	on_page(DevicePage).add_device(device_name, serial_number, protocol)
 end
 
@@ -49,7 +49,7 @@ When /^点击设备界面的刷新按钮$/ do
 	on_page(DevicePage).click_reload_icon
 end
 
-Then /^名字为'(.*)'的设备变为在线状态$/ do |device_name|
+Then /^名字为'(.+)'的设备变为在线状态$/ do |device_name|
 	on_page(DevicePage).online?(device_name).should be_truthy
 	# binding.pry
 end
@@ -68,7 +68,7 @@ When /^复制URL，Username，Password到simulator，点击下一步，进入探
 end
 
 
-Then /^探测到设备，编辑设备名为'(.*)'，点击保存按钮$/ do |sn|
+Then /^探测到设备，编辑设备名为'(.+)'，点击保存按钮$/ do |sn|
 	on_page(DevicePage).detect_add(sn)
 	sleep 2
 end

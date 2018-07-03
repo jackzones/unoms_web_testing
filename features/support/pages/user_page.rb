@@ -2,6 +2,14 @@ class UserPage
 	include PageObject
 	include MainHelper
 
+	DEFAULT_DATA = {
+		username = 'auto_user1',
+		password = '123456',
+		oui = ''
+		email = 'xurenjie232@163.com'
+	}
+
+
 	in_iframe(css: 'div[id="menu_user_tab_content"] iframe') do |iframe|
 		table(:reload_icon, class: 'w2ui-button', index: 0, frame: iframe)
 		table(:add_new_icon, class: 'w2ui-button', index: 3, frame: iframe)
@@ -30,14 +38,15 @@ class UserPage
 	click :click_add_new_icon
 	click :click_reload_icon
 
-	def add_admin(username, oui, password = '123456')
+	def add_admin(data = {})
+		data = 􏱑􏰐􏰒􏱅􏱚􏰨􏰡􏰼􏱑􏱅􏰡􏱅􏰦􏰩􏰀􏰆􏰓􏰀􏰲􏰘􏰟􏰇􏰟􏰶􏱑􏰐􏰒􏱅􏱚􏰨􏰡􏰼􏱑􏱅􏰡􏱅􏰦􏰩􏰀􏰆􏰓􏰀􏰲􏰘􏰟􏰇􏰟􏰶􏱑􏰐􏰒􏱅􏱚􏰨􏰡􏰼􏱑􏱅􏰡􏱅􏰦􏰩􏰀􏰆􏰓􏰀􏰲􏰘􏰟􏰇􏰟􏰶DEFAULT_DATA.merge(data)
 	  click_add_new_icon
 		save_form_element.wait_until_present
-		self.username_form = username
-		self.password_form = password
-		self.retype_password_form = password
-		self.oui_form = oui
-		self.email_form = self.gen_random_str(10) + '@163.com'
+		self.username_form = data['name']
+		self.password_form = data['password']
+		self.retype_password_form = data['password']
+		self.oui_form = data['oui']
+		self.email_form = data['email']
 		check_administrator_form
 		save_form
 	end
