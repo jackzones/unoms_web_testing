@@ -1,5 +1,5 @@
 
-auto_mount_user:
-  username: auto_user
+user1:
+  username: test_user
   password: 123456
   email: ~email_address

@@ -4,10 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-DevicePage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^class DevicePage$/;"	class	line:3
-click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def self.click(name)$/;"	singleton method	line:64
-iframe_text	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def iframe_text$/;"	method	line:87
-add_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def add_device(device_name, serial_number, protocol)$/;"	method	line:91
-online?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def online?(device_name)$/;"	method	line:102
-set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def set_acs_info$/;"	method	line:109
-detect_add	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def detect_add(sn, s_id= '')$/;"	method	line:117
+UserPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^class UserPage$/;"	class	line:1
+click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def self.click(name)$/;"	singleton method	line:21
+add_admin	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def add_admin(data = {})$/;"	method	line:34
