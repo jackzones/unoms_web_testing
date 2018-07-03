@@ -3,14 +3,6 @@ class UserPage
 	include MainHelper
 	include DataMagic
 
-	# DEFAULT_DATA = {
-	# 	username: 'auto_user1',
-	# 	password: '123456',
-	# 	oui:  '',
-	# 	email: 'xurenjie232@163.com'
-	# }
-
-
 	in_iframe(css: 'div[id="menu_user_tab_content"] iframe') do |iframe|
 		table(:reload_icon, class: 'w2ui-button', index: 0, frame: iframe)
 		table(:add_new_icon, class: 'w2ui-button', index: 3, frame: iframe)
