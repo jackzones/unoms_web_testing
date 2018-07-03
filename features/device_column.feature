@@ -3,10 +3,10 @@ Feature: Device Column
 
 Background:
 	Given 用户root登录英文系统
-	And 点击SUBSCRIPTION菜单
-	And 点击Device菜单
+	And 进入Device界面
+	And 切换到Device界面
 
-  
+
 	Scenario: the existence of the device column
 
 	    # Then the subscriber_name_column disapper

@@ -7,8 +7,8 @@ class SettingsPage
 	end
 
 	def set_auto_mount(checked)
-		self.save_form_element.wait_until_present
+		save_form_element.wait_until_present
 		checked == true ? check_auto_mount : uncheck_auto_mount
-		self.save_form_element.click
+		save_form_element.click
 	end
 end

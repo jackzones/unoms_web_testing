@@ -50,9 +50,9 @@ class SimTR
   end
 
   def device_register(serial_number)
-    self.stop
-    self.modify_sn(serial_number)
-    self.start
+    stop
+    modify_sn(serial_number)
+    start
     sleep 1
   end
 

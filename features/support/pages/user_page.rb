@@ -31,14 +31,14 @@ class UserPage
 	click :click_reload_icon
 
 	def add_admin(username, oui, password = '123456')
-	  self.click_add_new_icon
-		self.save_form_element.wait_until_present
+	  click_add_new_icon
+		save_form_element.wait_until_present
 		self.username_form = username
 		self.password_form = password
 		self.retype_password_form = password
 		self.oui_form = oui
 		self.email_form = self.gen_random_str(10) + '@163.com'
-		self.check_administrator_form
-		self.save_form
+		check_administrator_form
+		save_form
 	end
 end

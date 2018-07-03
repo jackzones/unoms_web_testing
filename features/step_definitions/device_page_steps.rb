@@ -62,13 +62,11 @@ When /^点击http，digest认证$/ do
 	on_page(DevicePage).digest_button
 end
 
-When /^复制URL，Username，Password到simulator$/ do
+When /^复制URL，Username，Password到simulator，点击下一步，进入探测界面$/ do
 	on_page(DevicePage).set_acs_info
-end
-
-When /^点击下一步，进入探测界面$/ do
 	on_page(DevicePage).detect_next
 end
+
 
 Then /^探测到设备，编辑设备名为'(.*)'，点击保存按钮$/ do |sn|
 	on_page(DevicePage).detect_add(sn)

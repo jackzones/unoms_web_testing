@@ -89,13 +89,13 @@ class DevicePage
 	end
 
 	def add_device(device_name, serial_number, protocol)
-	  self.click_add_new_icon
-		self.save_form_element.wait_until_present
+	  click_add_new_icon
+		save_form_element.wait_until_present
 		self.name_form = device_name
 		self.serial_number_form = serial_number
 		self.protocol_form = protocol
-		self.drop_down_form_element[protocol].click
-		self.save_form
+		drop_down_form_element[protocol].click
+		save_form
 	end
 
 	#device list 分两个table，找到第一个表row_index和第二个表td的class的关系，减2
@@ -107,7 +107,7 @@ class DevicePage
 	end
 
 	def set_acs_info
-		self.detect_next_element.wait_until_present
+		detect_next_element.wait_until_present
 		url = self.detect_url
 		username = self.detect_username
 		password = self.detect_password
@@ -115,10 +115,10 @@ class DevicePage
 	end
 
 	def detect_add(sn, s_id= '')
-		self.save_form_element.wait_until_present
+		save_form_element.wait_until_present
 		self.detect_device_name = sn
 		self.detect_subscriber_id = s_id
-		self.save_form
+		save_form
 	end
 
 end

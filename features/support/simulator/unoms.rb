@@ -1,5 +1,5 @@
 class UnoMS
-  
+
   def stop
     system("echo op[]=-09 | sudo -S systemctl stop unoms", :out => File::NULL)
   end

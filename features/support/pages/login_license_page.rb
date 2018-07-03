@@ -8,10 +8,10 @@ class LoginLicensePage
   	end
 
     def import_license_file(file_path)
-      self.save_form_element.wait_until_present
+      save_form_element.wait_until_present
       self.license_file_form = file_path
-      self.save_form
-      self.yes_confirm_element.wait_until_present.click
+      save_form
+      yes_confirm_element.wait_until_present.click
       # sleep 1
     end
 

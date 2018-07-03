@@ -4,3 +4,14 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+SimTR	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^class SimTR$/;"	class	line:1
+initialize	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def initialize($/;"	method	line:5	class:SimTR
+input	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def input(filename,s)$/;"	method	line:15	class:SimTR
+output	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def output(filename,reg,sub_str)$/;"	method	line:21	class:SimTR
+stop	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def stop$/;"	method	line:32	class:SimTR
+start	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def start$/;"	method	line:38	class:SimTR
+modify_sn	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_sn(sn)$/;"	method	line:46	class:SimTR
+device_register	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def device_register(serial_number)$/;"	method	line:52	class:SimTR
+data_model_path	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def data_model_path$/;"	method	line:59	class:SimTR
+set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def set_acs_info(url, username, password)$/;"	method	line:70	class:SimTR
+modify_oui	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_oui(oui)$/;"	method	line:77	class:SimTR
