@@ -3,10 +3,10 @@ class UserPage
 	include MainHelper
 
 	DEFAULT_DATA = {
-		username = 'auto_user1',
-		password = '123456',
-		oui = ''
-		email = 'xurenjie232@163.com'
+		username: 'auto_user1',
+		password: '123456',
+		oui:  '',
+		email: 'xurenjie232@163.com'
 	}
 
 
@@ -42,7 +42,7 @@ class UserPage
 		data = 􏱑􏰐􏰒􏱅􏱚􏰨􏰡􏰼􏱑􏱅􏰡􏱅􏰦􏰩􏰀􏰆􏰓􏰀􏰲􏰘􏰟􏰇􏰟􏰶􏱑􏰐􏰒􏱅􏱚􏰨􏰡􏰼􏱑􏱅􏰡􏱅􏰦􏰩􏰀􏰆􏰓􏰀􏰲􏰘􏰟􏰇􏰟􏰶􏱑􏰐􏰒􏱅􏱚􏰨􏰡􏰼􏱑􏱅􏰡􏱅􏰦􏰩􏰀􏰆􏰓􏰀􏰲􏰘􏰟􏰇􏰟􏰶DEFAULT_DATA.merge(data)
 	  click_add_new_icon
 		save_form_element.wait_until_present
-		self.username_form = data['name']
+		self.username_form = data['username']
 		self.password_form = data['password']
 		self.retype_password_form = data['password']
 		self.oui_form = data['oui']
