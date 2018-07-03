@@ -36,7 +36,7 @@ class UserPage
 	  click_add_new_icon
 		save_form_element.wait_until_present
 		populate_page_with data
-		# check_administrator_form
+		check_administrator_form
 		save_form
 	end
 end
