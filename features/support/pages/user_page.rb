@@ -40,7 +40,7 @@ class UserPage
 	click :click_reload_icon
 
 	def add_admin(data = {})
-		data = DataMagic.data_for(:auto_mount_user, data)
+		data = data_for(:auto_mount_user, data)
 	  click_add_new_icon
 		save_form_element.wait_until_present
 		self.username_form = data[:username]
