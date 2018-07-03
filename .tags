@@ -5,13 +5,6 @@ clients	/Users/jackzones/Wing/unoms_web_testing/features/support/mongoid.yml	/^ 
 default	/Users/jackzones/Wing/unoms_web_testing/features/support/mongoid.yml	/^    default:$/;"	function	line:3
 database	/Users/jackzones/Wing/unoms_web_testing/features/support/mongoid.yml	/^      database: mongoid$/;"	function	line:4
 hosts	/Users/jackzones/Wing/unoms_web_testing/features/support/mongoid.yml	/^      hosts:$/;"	function	line:5
-DevicePage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^class DevicePage$/;"	class	line:3
-click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def self.click(name)$/;"	singleton method	line:64
-iframe_text	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def iframe_text$/;"	method	line:87
-add_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def add_device(device_name, serial_number, protocol)$/;"	method	line:91
-online?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def online?(device_name)$/;"	method	line:102
-set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def set_acs_info$/;"	method	line:109
-detect_add	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def detect_add(sn, s_id= '')$/;"	method	line:117
 LoginLicensePage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/login_license_page.rb	/^class LoginLicensePage$/;"	class	line:1
 import_license_file	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/login_license_page.rb	/^    def import_license_file(file_path)$/;"	method	line:10
 SettingsPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/settings_page.rb	/^class SettingsPage$/;"	class	line:1
@@ -34,3 +27,10 @@ auto_mount_user	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	
 username	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  username: auto_user$/;"	function	line:3
 password	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  password: 123456$/;"	function	line:4
 email	/Users/jackzones/Wing/unoms_web_testing/config/data/default.yml	/^  email: ~email_address$/;"	function	line:5
+DevicePage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^class DevicePage$/;"	class	line:3
+click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def self.click(name)$/;"	singleton method	line:64
+iframe_text	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def iframe_text$/;"	method	line:87
+add_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def add_device(device_name, serial_number, protocol)$/;"	method	line:91
+online?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def online?(device_name)$/;"	method	line:102
+set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def set_acs_info$/;"	method	line:109
+detect_add	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def detect_add(sn, s_id= '')$/;"	method	line:117
