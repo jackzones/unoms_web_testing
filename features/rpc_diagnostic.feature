@@ -5,7 +5,7 @@ Feature: 诊断菜单里的RPC方法测试
 
 		@test
 		Scenario: Reboot方法
-			When 对此设备运行测试菜单下的Reboot任务
+			When 对此设备运行诊断菜单下的Reboot任务
 			And 让序列号为'000000000100'的设备上线
 			Then 设备Reboot成功
 

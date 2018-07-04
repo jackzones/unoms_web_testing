@@ -77,7 +77,12 @@ When /^对此设备运行诊断菜单下的Reboot任务$/ do
 	visit_page(LoginPage)
 	navigate_to(DevicePage).select_device('auto_test0')
 	on_page(DevicePage).run_diag_reboot
+end
 
+When /^对此设备运行测试菜单下的Reboot任务$/ do
+	visit_page(LoginPage)
+	navigate_to(DevicePage).select_device('auto_test0')
+	on_page(DevicePage).run_test_reboot
 end
 
 Then /^设备Reboot成功$/ do

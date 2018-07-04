@@ -61,8 +61,12 @@ class DevicePage
 
 	#toolbar
 	div(:toolbar_icon, class: 'w2ui-flat-right', frame: iframe)
+	#toolbar-diagnostics
 	div(:diagnostic_reboot, id: 'node_Reboot', frame: iframe)
 	button(:run, class: 'w2ui-btn', name: 'run', frame: iframe)
+
+	#toolbar-test
+	div(:test_reboot, id: 'node_Test_Reboot', frame: iframe)
 	#reboot
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 	end
@@ -147,6 +151,12 @@ class DevicePage
 	def run_diag_reboot
 		unfold_toolbar
 		diagnostic_reboot_element.wait_until_present.click
+		run
+	end
+
+	def run_test_reboot
+		unfold_toolbar
+		test_reboot_element.wait_until_present.click
 		run
 	end
 
