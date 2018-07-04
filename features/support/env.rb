@@ -3,7 +3,7 @@ require 'page-object'
 require 'data_magic'
 require 'require_all'
 
-require_all File.dirname(__FILE__) + '/pages'
+require_all File.dirname(__FILE__) + '/'
 PageObject::PageFactory.routes = {
   :default => [
     [LoginPage, :login_with],

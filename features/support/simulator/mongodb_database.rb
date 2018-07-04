@@ -2,6 +2,8 @@
 class Device
   include Mongo::Document
 
+  self.collection_name = 'device'
+
   DEVICE_1 = {
   "version"=>0,
   "create_time"=>'',
