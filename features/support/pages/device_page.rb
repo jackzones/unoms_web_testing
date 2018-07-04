@@ -60,7 +60,7 @@ class DevicePage
 	div(:page_footer, class: 'w2ui-footer-right', frame: iframe)
 
 	#toolbar
-	div(:toolbar_right, class: 'w2ui-flat-left', frame: iframe)
+	div(:toolbar_icon, class: 'w2ui-flat-right', frame: iframe)
 	div(:diagnostic_reboot, id: 'node_Reboot', frame: iframe)
 	button(:run, class: 'w2ui-btn', name: 'run', frame: iframe)
 	#reboot
@@ -141,7 +141,7 @@ class DevicePage
 	end
 
 	def unfold_toolbar
-	  toolbar_right_element.click if toolbar_right_element.visible?
+	  toolbar_icon_element.click if toolbar_icon_element.visible?
 	end
 
 	def run_diag_reboot
