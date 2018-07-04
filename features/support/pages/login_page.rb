@@ -11,6 +11,7 @@ class LoginPage
 	link(:en_us, id: 'en-us')
 
 	def login_with(language, username, password)
+		login_element.wait_until_present
 		self.send language.to_sym
 		self.username = username
 		self.password = password
