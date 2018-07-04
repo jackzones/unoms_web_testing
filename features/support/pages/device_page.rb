@@ -126,7 +126,7 @@ class DevicePage
 
 	def reboot_success?
 		reboot_msg_element.wait_until_present
-		reboot_msg.match /Reboot time:\s\d+\sseconds/ ? true : false
+		reboot_msg.match(/Reboot time:\s\d+\sseconds/) ? true : false
 	end
 
 end
