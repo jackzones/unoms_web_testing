@@ -1,4 +1,4 @@
-require 'mongo/document'
+
 
 class Device
   include Mongo::Document
