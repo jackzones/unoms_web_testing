@@ -21,7 +21,7 @@ Feature: 设备注册
 			And 点击设备界面的刷新按钮
 			Then 名字为'auto_test1'的设备变为在线状态
 
-		@test
+		
 		Scenario: Auto mount方式设备注册
 			When 切换到设置界面
 			And 开启Auto Mount功能

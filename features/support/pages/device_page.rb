@@ -109,6 +109,13 @@ class DevicePage
 		status == "w2ui-icon-check" ? true : false
 	end
 
+	def select_device(device_name)
+		row_index = self.iframe(css: 'div[id="menu_device_tab_content"] iframe').div(id: 'grid_device_frecords').tr(text: /#{device_name}/).rowindex
+		# Watir::Wait.until {self.iframe(index: 1).div(id: 'grid_device_records').table.td(id: "grid_device_data_#{row_index - 2}_12").div.text.include? '/'}
+		self.iframe(css: 'div[id="menu_device_tab_content"] iframe').div(id: 'grid_device_records').table.td(id: "grid_device_data_#{row_index - 2}_11").span.click
+
+	end
+
 	def set_acs_info
 		detect_next_element.wait_until_present
 		url = self.detect_url

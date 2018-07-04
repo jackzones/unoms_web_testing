@@ -74,7 +74,7 @@ Then /^探测到设备，编辑设备名为'(.+)'，点击保存按钮$/ do |sn|
 end
 
 When /^对此设备运行诊断菜单下的Reboot任务$/ do
-	# navigate_to(DevicePage).
+	navigate_to(DevicePage).select_device('auto_test0')
 end
 
 Then /^设备Reboot成功$/ do
