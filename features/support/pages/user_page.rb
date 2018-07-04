@@ -1,3 +1,5 @@
+require_relative '../helper/main_helper'
+
 class UserPage
 	include PageObject
 	include MainHelper
