@@ -33,4 +33,9 @@ class HomePage
 	div(:menu_settings, id: 'node_menu_settings')
 	div(:menu_dashboard, id: 'node_menu_dashboard')
 
+	def goto_device_page
+		menu_subscription_element.wait_until_present.click
+		menu_device_element.wait_until_present.click
+	end
+
 end

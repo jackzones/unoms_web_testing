@@ -10,6 +10,8 @@ gem 'mongo', '2.5.1'
 # gem 'capybara-webkit', '1.11.1'
 gem 'headless', '~> 2.2', '>= 2.2.3'
 gem 'data_magic', '~> 0.21'
+gem 'require_all', '~> 1.3', '>= 1.3.3'
+gem 'mongo-document', '~> 1.0', '>= 1.0.1'
 # group :test do
 #   gem 'database_cleaner', '1.7.0'
 # end

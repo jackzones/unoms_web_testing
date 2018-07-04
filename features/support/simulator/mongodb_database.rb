@@ -1,18 +1,33 @@
-class MongodbDatabase
 
-  def initialize
-    Mongo::Client.new('mongodb://127.0.0.1:27017/unoms')
-  end
+class Device
+  include Mongo::Document
 
-  # except_collection = ['license', 'script', 'permission', 'user', 'grid_state', 'settings']
-  # client.collections.delete_if{|i| i.name == 'license'}.each {|i| i.delete_many}
-
-  def delete_collection_data
-    except_collection = ['license', 'script', 'permission', 'user', 'grid_state', 'settings']
-    self.collections.delete_if{|i| except_collection.include?(i.name)}.each {|i| i.delete_many}
-    self[:script].delete_many("built_in" => {"$ne" => true})
-    self[:user].delete_many("username" => {"$ne" => "root"})
-    self[:settings].update_one({"smtp_port" => 465}, "$set" => {"auto_mount" => false})
-  end
-
+  DEVICE_1 = {
+  "version"=>0,
+  "create_time"=>'',
+  "modify_time"=>'',
+  "name"=>"auto_test0",
+  "oui"=>"",
+  "product_class"=>"",
+  "manufacturer"=>"",
+  "model"=>"",
+  "serial_number"=>"000000000100",
+  "ip_address"=>"",
+  "last_online_time"=>'',
+  "firmware_version"=>"",
+  "hardware_version"=>"",
+  "protocol"=>"CWMP",
+  "number_of_informs"=>0,
+  "domain"=>"",
+  "tags"=>[],
+  "username"=>"root",
+  "conn_req_url"=>"",
+  "udp_conn_req_addr"=>"",
+  "nat_detected"=>false,
+  "port"=>161,
+  "community"=>"public",
+  "rack"=>0,
+  "slot"=>0,
+  "coordinate"=>[0.0, 0.0]
+  }
 end

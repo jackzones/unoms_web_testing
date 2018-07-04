@@ -2,6 +2,7 @@ require 'watir'
 require 'pry'
 require 'mongo'
 require_relative 'simulator/simtr'
+require 'mongo/document'
 # require_relative 'simulator/unoms'
 # require_relative 'simulator/mongodb_database'
 
@@ -23,6 +24,10 @@ Before do
   # visit_page(LoginPage)
   # visit_page(LoginPage).login_with('en_us', 'root', '123456')
   # on_page(LoginLicensePage).import_license_file(@simtr.license_file)
+#   Mongo::Document.establish_connection(
+#   :hosts => ["localhost:27017"],
+#   :database => "unoms",
+# )
 end
 
 After do |scenario|
@@ -37,7 +42,7 @@ After do |scenario|
   @browser.close
   @simtr.stop
 end
-# 
+#
 # After do |s|
 #   # Tell Cucumber to quit after this scenario is done - if it failed.
 #   Cucumber.wants_to_quit = true if s.failed?

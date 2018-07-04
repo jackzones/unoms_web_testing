@@ -72,3 +72,11 @@ Then /^探测到设备，编辑设备名为'(.+)'，点击保存按钮$/ do |sn|
 	on_page(DevicePage).detect_add(sn)
 	sleep 2
 end
+
+When /^对此设备运行诊断菜单下的Reboot任务$/ do
+	navigate_to(DevicePage).
+end
+
+Then /^设备Reboot成功$/ do
+	on_page(DevicePage).reboot_success?.should be_truthy
+end

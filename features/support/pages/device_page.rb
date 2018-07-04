@@ -58,6 +58,9 @@ class DevicePage
 	text_field(:detect_subscriber_id, id: 'subscriber_id', frame: iframe)
 
 	div(:page_footer, class: 'w2ui-footer-right', frame: iframe)
+
+	#reboot
+	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
@@ -119,6 +122,11 @@ class DevicePage
 		self.detect_device_name = sn
 		self.detect_subscriber_id = s_id
 		save_form
+	end
+
+	def reboot_success?
+		reboot_msg_element.wait_until_present
+		reboot_msg.match /Reboot time:\s\d+\sseconds/ ? true : false
 	end
 
 end

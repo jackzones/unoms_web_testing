@@ -33,4 +33,5 @@
 
 // * 失败截图，html报告能查看截图。
 * 将sim里的变量，使用其他方法，当做配置来实现。factory_bot
-* 是否需要使用ActiveRecord连接数据库
+* 是否需要使用ActiveRecord连接数据库--无法，要用MongoID
+* 建立数据库连接，使用factory——bot创建数据，数据库用mongoid
