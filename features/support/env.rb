@@ -1,9 +1,11 @@
 require 'rspec'
 require 'page-object'
 require 'data_magic'
-require 'require_all'
-
-require_all File.dirname(__FILE__) + '/'
+# require 'require_all'
+#
+require_all File.dirname(__FILE__) + '/pages', \
+File.dirname(__FILE__) + '/helper', File.dirname(__FILE__) + '/others', \
+File.dirname(__FILE__) + '/simulator'
 
 World(PageObject::PageFactory)
 
