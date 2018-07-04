@@ -5,8 +5,8 @@ require 'require_all'
 require 'mongo/document'
 #
 require_all File.dirname(__FILE__) + '/pages', \
-File.dirname(__FILE__) + '/helper', File.dirname(__FILE__) + '/others', \
-File.dirname(__FILE__) + '/simulator'
+File.dirname(__FILE__) + '/helper', File.dirname(__FILE__) + '/resource', \
+File.dirname(__FILE__) + '/simulator', File.dirname(__FILE__) + '/model'
 
 World(PageObject::PageFactory)
 

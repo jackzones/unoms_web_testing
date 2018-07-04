@@ -1,5 +1,4 @@
 
-
 class Device
   include Mongo::Document
 

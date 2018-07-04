@@ -5,7 +5,7 @@ class SimTR
   def initialize(
     app_conf_file='/home/arthur/unotr/conf/app.conf',
     digest_url_without_rkey='http://127.0.0.1/sbi/cwmp/digest',
-    license_file = "/home/arthur/Documents/unoms_web_testing/features/support/others/ubuntu_auto_CWMP.lic"
+    license_file = "/home/arthur/Documents/unoms_web_testing/features/support/resource/ubuntu_auto_CWMP.lic"
   )
     @app_conf_file = app_conf_file
     @digest_url_without_rkey = digest_url_without_rkey

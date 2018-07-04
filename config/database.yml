@@ -1,9 +1,0 @@
-development:
-  hosts:
-    -- localhost:27017
-  database: unoms
-
-test:
-  hosts:
-    -- localhost:27017
-  database: unoms
