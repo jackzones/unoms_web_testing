@@ -144,18 +144,18 @@ class DevicePage
 		reboot_msg.match(/Reboot time:\s\d+\sseconds/) ? true : false
 	end
 
-	def unfold_toolbar
+	def expand_toolbar
 	  toolbar_icon_element.click if toolbar_icon_element.visible?
 	end
 
 	def run_diag_reboot
-		unfold_toolbar
+		expand_toolbar
 		diagnostic_reboot_element.wait_until_present.click
 		run
 	end
 
 	def run_test_reboot
-		unfold_toolbar
+		expand_toolbar
 		test_reboot_element.wait_until_present.click
 		run
 	end

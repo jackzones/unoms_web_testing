@@ -24,10 +24,10 @@ Before do
   # visit_page(LoginPage)
   # visit_page(LoginPage).login_with('en_us', 'root', '123456')
   # on_page(LoginLicensePage).import_license_file(@simtr.license_file)
-  Mongo::Document.establish_connection(
-  :hosts => ["localhost:27017"],
-  :database => "unoms",
-)
+#   Mongo::Document.establish_connection(
+#   :hosts => ["localhost:27017"],
+#   :database => "unoms",
+# )
 end
 
 After do |scenario|
