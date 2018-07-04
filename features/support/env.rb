@@ -3,9 +3,9 @@ require 'page-object'
 require 'data_magic'
 require 'require_all'
 
-require_all File.dirname(__FILE__) + '/pages'
-require_all File.dirname(__FILE__) + '/helper'
-require_all File.dirname(__FILE__) + '/simulator'
+require_all File.dirname(__FILE__) + '/'
+
+World(PageObject::PageFactory)
 
 PageObject::PageFactory.routes = {
   :default => [
@@ -15,7 +15,7 @@ PageObject::PageFactory.routes = {
   ]
 }
 
-World(PageObject::PageFactory)
+
 # World(FactoryBot::Syntax::Methods)
 
 if ENV['HEADLESS'] == 'true'
