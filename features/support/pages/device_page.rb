@@ -59,6 +59,10 @@ class DevicePage
 
 	div(:page_footer, class: 'w2ui-footer-right', frame: iframe)
 
+	#toolbar
+	div(:toolbar_right, class: 'w2ui-flat-left', frame: iframe)
+	div(:diagnostic_reboot, id: 'node_Reboot', frame: iframe)
+	button(:run, class: 'w2ui-btn', name: 'run', frame: iframe)
 	#reboot
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 	end
@@ -134,6 +138,16 @@ class DevicePage
 	def reboot_success?
 		reboot_msg_element.wait_until_present
 		reboot_msg.match(/Reboot time:\s\d+\sseconds/) ? true : false
+	end
+
+	def unfold_toolbar
+	  toolbar_right_element.click if toolbar_right_element.visible?
+	end
+
+	def run_diag_reboot
+		unfold_toolbar
+		diagnostic_reboot_element.wait_until_present.click
+		run
 	end
 
 end
