@@ -75,6 +75,7 @@ end
 
 When /^对此设备运行诊断菜单下的Reboot任务$/ do
 	navigate_to(DevicePage).select_device('auto_test0')
+	binding.pry
 end
 
 Then /^设备Reboot成功$/ do
