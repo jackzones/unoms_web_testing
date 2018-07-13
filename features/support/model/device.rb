@@ -32,4 +32,5 @@ class Device
   "slot"=>0,
   "coordinate"=>[0.0, 0.0]
   }
+
 end
