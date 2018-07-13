@@ -3,8 +3,13 @@ Feature: 测试菜单里的RPC方法测试
 	Background:
 		Given 系统中存在一个设备
 
-		@test
-		Scenario: Reboot方法
-			When 对此设备运行测试菜单下的Reboot任务
-			And 让序列号为'000000000100'的设备上线
-			Then 设备Reboot成功
+	Scenario: Reboot方法
+		When 对此设备运行测试菜单下的Reboot任务
+		And 让序列号为'000000000100'的设备上线
+		Then 设备Reboot成功
+
+	@test
+	Scenario: GPN(param=full path, nl=false) 返回参数本身
+		When 对设备运行测试菜单下的GetParameterNames任务，参数为'Device.DeviceInfo.ManufacturerOUI'，NextLevel为'false'
+		And 让序列号为'000000000100'的设备上线
+		Then RPC返回结果包含'Name:Device.DeviceInfo.ManufacturerOUIWritable:false'

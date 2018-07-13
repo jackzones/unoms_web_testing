@@ -67,8 +67,14 @@ class DevicePage
 
 	#toolbar-test
 	div(:test_reboot, id: 'node_Test_Reboot', frame: iframe)
+	div(:test_gpn, id: 'node_Test_GetParameterNames', frame: iframe)
 	#reboot
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
+
+	#toolbar form
+	text_field(:parameter_form, id: 'Parameter', frame: iframe)
+	checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
+	div(:result, id: 'tree', frame: iframe)
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
@@ -157,6 +163,15 @@ class DevicePage
 	def run_test_reboot
 		expand_toolbar
 		test_reboot_element.wait_until_present.click
+		run
+	end
+
+	def run_test_gpn(param, next_level)
+		expand_toolbar
+		test_gpn_element.wait_until_present.click
+		parameter_form = param
+		drop_down_form_element[param].click
+		next_level == 'true' ? check_next_level : uncheck_next_level
 		run
 	end
 
