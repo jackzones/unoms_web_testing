@@ -74,7 +74,7 @@ class DevicePage
 	#toolbar form
 	text_field(:parameter_form, id: 'Parameter', frame: iframe)
 	checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
-	div(:result, id: 'tree', frame: iframe)
+	div(:result_form, id: 'tree', frame: iframe)
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
@@ -173,6 +173,10 @@ class DevicePage
 		drop_down_form_element[param].click
 		next_level == 'true' ? check_next_level : uncheck_next_level_form
 		run
+	end
+
+	def result
+	  result_form.strip
 	end
 
 end
