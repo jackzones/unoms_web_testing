@@ -89,7 +89,7 @@ Then /^设备Reboot成功$/ do
 	on_page(DevicePage).reboot_success?.should be_truthy
 end
 
-When /^对设备运行测试菜单下的GetParameterNames任务，参数为'(.+)'，NextLevel为'(\w+)'$/ do |parameter, next_level|
+When /^对设备运行测试菜单下的GetParameterNames任务，参数为'(.*)'，NextLevel为'(\w+)'$/ do |parameter, next_level|
 	visit_page(LoginPage)
 	navigate_to(DevicePage).select_device('auto_test0')
 	on_page(DevicePage).run_test_gpn(parameter, next_level)
