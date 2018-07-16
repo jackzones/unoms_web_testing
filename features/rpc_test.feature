@@ -24,3 +24,4 @@ Feature: 测试菜单里的RPC方法测试
 			| parameter | next_level | result_message |
 			| Device.DeviceInfo.ManufacturerOUI | false | Name:Device.DeviceInfo.ManufacturerOUIWritable:false |
 			| Device.DeviceInfo.ManufacturerOUI | true | 9003 |
+			|   | true | Device. |
