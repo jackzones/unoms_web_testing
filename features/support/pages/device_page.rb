@@ -176,7 +176,7 @@ class DevicePage
 	end
 
 	def result
-	  result_form.strip
+	  result_form.tr("\n", "").strip
 	end
 
 end
