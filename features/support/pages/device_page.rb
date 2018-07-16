@@ -171,7 +171,7 @@ class DevicePage
 		test_gpn_element.wait_until_present.click
 		self.parameter_form = param
 		drop_down_form_element[param].click
-		next_level == 'true' ? check_next_level : uncheck_next_level_form
+		next_level == 'true' ? check_next_level_form : uncheck_next_level_form
 		run
 	end
 
