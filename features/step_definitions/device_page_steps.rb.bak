@@ -10,18 +10,18 @@ When /^click the label of (.+)$/ do |click|
 end
 
 Then /^the (.+) disapper$/ do |element|
-expect((on_page(DevicePage).send element.to_sym).exists?).to be false
+	(on_page(DevicePage).send element.to_sym).exists?.should be false
 
-expect(	# on_page(DevicePage).subscriber_name_column_element.present?).to be_falsey
+	# on_page(DevicePage).subscriber_name_column_element.present?.should be_falsey
 end
 
 Then /^the serial_number_column exists$/ do
 	# sleep 2
-expect(on_page(DevicePage).serial_number_column_element.present?).to be true
+	on_page(DevicePage).serial_number_column_element.present?.should be true
 end
 
 Then /^the oui_column exists$/ do
-expect(on_page(DevicePage).oui_column_element.present?).to be true
+	on_page(DevicePage).oui_column_element.present?.should be true
 	# binding.pry
 end
 
@@ -30,7 +30,7 @@ When /^hover the mouse on the reload$/ do
 end
 
 Then /^show the text "([^\"]*)"$/ do |excepted|
-expect(on_page(DevicePage).iframe_text).to include excepted
+	on_page(DevicePage).iframe_text.should include excepted
 end
 
 When /^hover the mouse on the (.+)$/ do |tool_menu|
@@ -39,7 +39,7 @@ When /^hover the mouse on the (.+)$/ do |tool_menu|
 end
 
 Then /^I will see the (.+)$/ do |message|
-expect(on_page(DevicePage).iframe_text).to include message
+	on_page(DevicePage).iframe_text.should include message
 end
 
 When /^添加一个设备，名字为'(.+)'，序列号为'(\d+)'，协议为'(\w+)'$/ do |device_name, serial_number, protocol|
@@ -52,7 +52,7 @@ When /^点击设备界面的刷新按钮$/ do
 end
 
 Then /^名字为'(.+)'的设备变为在线状态$/ do |device_name|
-expect(on_page(DevicePage).online?(device_name)).to be_truthy
+	on_page(DevicePage).online?(device_name).should be_truthy
 	# binding.pry
 end
 
@@ -88,7 +88,7 @@ When /^对此设备运行测试菜单下的Reboot任务$/ do
 end
 
 Then /^设备Reboot成功$/ do
-expect(on_page(DevicePage).reboot_success?).to be_truthy
+	on_page(DevicePage).reboot_success?.should be_truthy
 end
 
 When /^对设备运行测试菜单下的GetParameterNames任务，参数为'(.+)'，NextLevel为'(\w+)'$/ do |parameter, next_level|
