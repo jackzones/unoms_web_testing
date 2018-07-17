@@ -70,6 +70,7 @@ class DevicePage
 	div(:test_reboot, id: 'node_Test_Reboot', frame: iframe)
 	div(:test_gpn, id: 'node_Test_GetParameterNames', frame: iframe)
 	div(:test_gpv, id: 'node_Test_GetParameterValues', frame: iframe)
+	div(:test_gpa, id: 'node_Test_GetParameterAttributes', frame: iframe)
 	#reboot
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 
