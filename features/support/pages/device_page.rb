@@ -208,7 +208,7 @@ class DevicePage
 
 	def run_test_gpv(param)
 		expand_toolbar
-		test_gpn_element.wait_until_present.click
+		test_gpv_element.wait_until_present.click
 		parameters_form_element.wait_until_present.click
 		names = MainHelper.to_array_by_comma(param)
 		names.each do |name|
