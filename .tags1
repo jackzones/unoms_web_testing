@@ -5,16 +5,16 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 DevicePage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^class DevicePage$/;"	class	line:3
-click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def self.click(name)$/;"	singleton method	line:81
-iframe_text	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def iframe_text$/;"	method	line:104
-add_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def add_device(device_name, serial_number, protocol)$/;"	method	line:108
-online?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def online?(device_name)$/;"	method	line:119
-select_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def select_device(device_name)$/;"	method	line:126
-set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def set_acs_info$/;"	method	line:133
-detect_add	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def detect_add(sn, s_id= '')$/;"	method	line:141
-reboot_success?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def reboot_success?$/;"	method	line:148
-expand_toolbar	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def expand_toolbar$/;"	method	line:153
-run_diag_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_diag_reboot$/;"	method	line:157
-run_test_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_reboot$/;"	method	line:163
-run_test_gpn	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_gpn(next_level, param)$/;"	method	line:169
-result	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def result$/;"	method	line:180
+click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def self.click(name)$/;"	singleton method	line:82
+iframe_text	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def iframe_text$/;"	method	line:107
+add_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def add_device(device_name, serial_number, protocol)$/;"	method	line:111
+online?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def online?(device_name)$/;"	method	line:122
+select_device	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def select_device(device_name)$/;"	method	line:129
+set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def set_acs_info$/;"	method	line:136
+detect_add	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def detect_add(sn, s_id= '')$/;"	method	line:144
+reboot_success?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def reboot_success?$/;"	method	line:151
+expand_toolbar	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def expand_toolbar$/;"	method	line:156
+run_diag_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_diag_reboot$/;"	method	line:160
+run_test_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_reboot$/;"	method	line:166
+run_test_gpn	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_gpn(next_level, param)$/;"	method	line:172
+result	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def result$/;"	method	line:183

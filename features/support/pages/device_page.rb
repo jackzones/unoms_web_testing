@@ -72,6 +72,7 @@ class DevicePage
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 
 	#toolbar form
+	label(:parameter_label, text: 'Parameter', frame, iframe)
 	text_field(:parameter_form, id: 'Parameter', frame: iframe)
 	checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
 	div(:result_form, id: 'tree', frame: iframe)
@@ -100,6 +101,8 @@ class DevicePage
     ##click the label of the show_column_icon
     click :click_show_subscriber_name
     click :click_show_subscriber_id
+
+		click :click_parameter_label
 
 	def iframe_text
 		self.iframe(index: 1).text
@@ -171,7 +174,7 @@ class DevicePage
 		test_gpn_element.wait_until_present.click
 		unless param == 'empty'
 			self.parameter_form = param
-			drop_down_form_element[param].click if drop_down_form_element[param]
+			drop_down_form_element[param] == nil ? click_parameter_label : drop_down_form_element[param].click
 		end
 		next_level == 'true' ? check_next_level_form : uncheck_next_level_form
 		run
