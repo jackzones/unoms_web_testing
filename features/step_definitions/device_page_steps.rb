@@ -99,7 +99,7 @@ end
 
 
 Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
-	result_test_gpn(result_msg)
+	on_page(DevicePage).result_test_gpn(result_msg)
 end
 
 Then /^RPC返回结果只有'(.+)'$/ do |result_msg|

@@ -8,7 +8,7 @@ Feature: 测试菜单里的RPC方法测试
 		And 让序列号为'000000000100'的设备上线
 		Then 设备Reboot成功
 
-
+	@test
 	Scenario Outline: RPC测试，GetParameterNames测试，结果为包含。
 		When 对设备运行测试菜单下的GetParameterNames任务，参数为'<parameter>'，NextLevel为'<next_level>'
 		And 让序列号为'000000000100'的设备上线
