@@ -72,7 +72,7 @@ class DevicePage
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 
 	#toolbar form
-	label(:parameter_label, text: 'Parameter', frame, iframe)
+	label(:parameter_label, text: 'Parameter', frame:, iframe)
 	text_field(:parameter_form, id: 'Parameter', frame: iframe)
 	checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
 	div(:result_form, id: 'tree', frame: iframe)
