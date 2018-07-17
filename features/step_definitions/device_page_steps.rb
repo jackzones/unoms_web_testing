@@ -99,7 +99,9 @@ end
 
 
 Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
-	on_page(DevicePage).result_test_gpn(result_msg)
+	MainHelper.to_array_by_comma(result_msg).each do |msg|
+		on_page(DevicePage).result.should include msg
+	end
 end
 
 Then /^RPC返回结果只有'(.+)'$/ do |result_msg|

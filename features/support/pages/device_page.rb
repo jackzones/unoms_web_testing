@@ -1,9 +1,7 @@
 require_relative '../simulator/simtr'
-require 'rspec'
 
 class DevicePage
 	include PageObject
-	include MainHelper
 
 	in_iframe(css: 'div[id="menu_device_tab_content"] iframe') do |iframe|
 		# text_field(:address, id: 'address_id', frame: frame)
@@ -193,15 +191,6 @@ class DevicePage
 	end
 
 
-
-	def result_test_gpn(result_msg)
-		msg_arr = MainHelper.to_array_by_comma(result_msg)
-		if msg_arr.size == 1
-			self.result.should include result_msg
-		else
-			msg_arr.each {|msg| self.result.should include msg}
-		end
-	end
 	# def run_test_gpv(param)
 	# 	expand_toolbar
 	# 	test_gpn_element.wait_until_present.click
