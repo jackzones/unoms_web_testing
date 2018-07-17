@@ -24,9 +24,7 @@ Feature: 测试菜单里的RPC方法测试
 			| parameter | next_level | result_message |
 			| Device.DeviceInfo.ManufacturerOUI | true | 9003 |
 			| empty | false | Name:Device.DeviceInfo.ManufacturerOUIWritable:false, Name:Device.ManagementServer.PeriodicInformEnableWritable:true |
-			| Device.SoftwareModules.ExecEnv. | false | Name:Device.SoftwareModules.ExecEnv.1.:false, \
-			Name:Device.SoftwareModules.ExecEnv.Writable:false, \
-			Name:Device.SoftwareModules.ExecEnv.1.NameWritable:false |
+			| Device.SoftwareModules.ExecEnv. | false | Name:Device.SoftwareModules.ExecEnv.1.:false, Name:Device.SoftwareModules.ExecEnv.Writable:false, Name:Device.SoftwareModules.ExecEnv.1.NameWritable:false |
 
 
 	@test
