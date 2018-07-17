@@ -96,5 +96,15 @@ When /^对设备运行测试菜单下的GetParameterNames任务，参数为'(.+)
 end
 
 Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
-	on_page(DevicePage).result.should include result_msg
+	unless result_msg =~ /,/
+		on_page(DevicePage).result.should include result_msg
+	else
+		result_msg = result_msg.split(",")
+		result_msg.each do |msg|
+			on_page(DevicePage).result.should include msg.strip
+		end
+end
+
+Then /^RPC返回结果只有'(.+)'$/ do |result_msg|
+			on_page(DevicePage).result.should eq result_msg
 end

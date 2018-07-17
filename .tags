@@ -9,17 +9,6 @@ LoginLicensePage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/
 import_license_file	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/login_license_page.rb	/^    def import_license_file(file_path)$/;"	method	line:10
 SettingsPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/settings_page.rb	/^class SettingsPage$/;"	class	line:1
 set_auto_mount	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/settings_page.rb	/^	def set_auto_mount(checked)$/;"	method	line:9
-SimTR	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^class SimTR$/;"	class	line:1
-initialize	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def initialize($/;"	method	line:5	class:SimTR
-input	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def input(filename,s)$/;"	method	line:15	class:SimTR
-output	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def output(filename,reg,sub_str)$/;"	method	line:21	class:SimTR
-stop	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def stop$/;"	method	line:32	class:SimTR
-start	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def start$/;"	method	line:38	class:SimTR
-modify_sn	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_sn(sn)$/;"	method	line:46	class:SimTR
-device_register	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def device_register(serial_number)$/;"	method	line:52	class:SimTR
-data_model_path	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def data_model_path$/;"	method	line:59	class:SimTR
-set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def set_acs_info(url, username, password)$/;"	method	line:70	class:SimTR
-modify_oui	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_oui(oui)$/;"	method	line:77	class:SimTR
 UserPage	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^class UserPage$/;"	class	line:1
 click	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def self.click(name)$/;"	singleton method	line:21
 add_admin	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/user_page.rb	/^	def add_admin(data = {})$/;"	method	line:34
@@ -44,3 +33,20 @@ run_diag_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/d
 run_test_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_reboot$/;"	method	line:163
 run_test_gpn	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_gpn(next_level, param)$/;"	method	line:169
 result	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def result$/;"	method	line:180
+README	/Users/jackzones/Wing/unoms_web_testing/README.md	/^# README$/;"	function	line:2
+run with tags	/Users/jackzones/Wing/unoms_web_testing/README.md	/^## run with tags$/;"	function	line:4
+headless	/Users/jackzones/Wing/unoms_web_testing/README.md	/^## headless$/;"	function	line:8
+feature/step 书写原则	/Users/jackzones/Wing/unoms_web_testing/README.md	/^## feature\/step 书写原则$/;"	function	line:14
+feature书写习惯	/Users/jackzones/Wing/unoms_web_testing/README.md	/^## feature书写习惯$/;"	function	line:19
+运行cucumber前的操作	/Users/jackzones/Wing/unoms_web_testing/README.md	/^## 运行cucumber前的操作$/;"	function	line:24
+SimTR	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^class SimTR$/;"	class	line:1
+initialize	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def initialize($/;"	method	line:5	class:SimTR
+input	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def input(filename,s)$/;"	method	line:15	class:SimTR
+output	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def output(filename,reg,sub_str)$/;"	method	line:21	class:SimTR
+stop	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def stop$/;"	method	line:32	class:SimTR
+start	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def start$/;"	method	line:38	class:SimTR
+modify_sn	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_sn(sn)$/;"	method	line:46	class:SimTR
+device_register	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def device_register(serial_number)$/;"	method	line:52	class:SimTR
+data_model_path	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def data_model_path$/;"	method	line:59	class:SimTR
+set_acs_info	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def set_acs_info(url, username, password)$/;"	method	line:70	class:SimTR
+modify_oui	/Users/jackzones/Wing/unoms_web_testing/features/support/simulator/simtr.rb	/^  def modify_oui(oui)$/;"	method	line:77	class:SimTR
