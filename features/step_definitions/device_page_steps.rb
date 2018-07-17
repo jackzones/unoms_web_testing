@@ -111,10 +111,10 @@ end
 
 Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
 	MainHelper.to_array_by_comma(result_msg).each do |msg|
-		on_page(DevicePage).result.should include msg
+		expect(on_page(DevicePage).result).to include msg
 	end
 end
 
 Then /^RPC返回结果只有'(.+)'$/ do |result_msg|
-		on_page(DevicePage).result.should eq result_msg
+		expect(on_page(DevicePage).result).to eq result_msg
 end
