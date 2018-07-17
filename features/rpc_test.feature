@@ -22,7 +22,7 @@ Feature: 测试菜单里的RPC方法测试
 
 		Examples:
 			| parameter | next_level | result_message |
-			| Device.DeviceInfo.ManufacturerOUI | true | 9003 |
+			| Device.DeviceInfo.ManufacturerOUI | true | FaultCode:9003 |
 			| empty | false | Name:Device.DeviceInfo.ManufacturerOUIWritable:false, Name:Device.ManagementServer.PeriodicInformEnableWritable:true |
 			| Device.SoftwareModules.ExecEnv. | false | Name:Device.SoftwareModules.ExecEnv.1.Writable:false, Name:Device.SoftwareModules.ExecEnv.Writable:false, Name:Device.SoftwareModules.ExecEnv.1.NameWritable:false |
 
@@ -37,6 +37,6 @@ Feature: 测试菜单里的RPC方法测试
 			| parameter | next_level | result_message |
 			| Device.DeviceInfo.ManufacturerOUI | false | Name:Device.DeviceInfo.ManufacturerOUIWritable:false |
 			| empty | true | Name:Device.Writable:false |
-			| Device.DeviceInfo.Ma | true | FaultCode:9005FaultString:Invalid Parameter name |
+			| Device.DeviceInfo.Ma | true | FaultCode:9005FaultString:Invalid arguments |
 			| Device.SoftwareModules.ExecEnv. | true | Name:Device.SoftwareModules.ExecEnv.1.Writable:false |
 			| Device.SoftwareModules.DeploymentUnit. | true | Success |
