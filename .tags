@@ -42,5 +42,5 @@ reboot_success?	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/d
 expand_toolbar	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def expand_toolbar$/;"	method	line:153
 run_diag_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_diag_reboot$/;"	method	line:157
 run_test_reboot	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_reboot$/;"	method	line:163
-run_test_gpn	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_gpn(next_level, param='')$/;"	method	line:169
+run_test_gpn	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def run_test_gpn(next_level, param)$/;"	method	line:169
 result	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def result$/;"	method	line:180
