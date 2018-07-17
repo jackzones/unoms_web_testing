@@ -75,7 +75,7 @@ class DevicePage
 	label(:parameter_label, text: 'Parameter', frame: iframe)
 	text_field(:parameter_form, id: 'Parameter', frame: iframe)
 	checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
-	div(:result_form, class: 'w2ui-page page-0', frame: iframe)
+	div(:result_form, class: %w(w2ui-page page-0), frame: iframe)
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
