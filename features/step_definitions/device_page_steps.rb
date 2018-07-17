@@ -103,6 +103,7 @@ Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
 		result_msg.each do |msg|
 			on_page(DevicePage).result.should include msg.strip
 		end
+	end
 end
 
 Then /^RPC返回结果只有'(.+)'$/ do |result_msg|
