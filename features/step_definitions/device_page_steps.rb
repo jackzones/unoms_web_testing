@@ -12,7 +12,6 @@ end
 Then /^the (.+) disapper$/ do |element|
 expect((on_page(DevicePage).send element.to_sym).exists?).to be false
 
-expect(	# on_page(DevicePage).subscriber_name_column_element.present?).to be_falsey
 end
 
 Then /^the serial_number_column exists$/ do
