@@ -36,7 +36,7 @@ Feature: 测试菜单里的RPC方法测试
 		Examples:
 			| parameter | next_level | result_message |
 			| Device.DeviceInfo.ManufacturerOUI | false | Name:Device.DeviceInfo.ManufacturerOUIWritable:false |
-			| empty | true | Device. |
-			| Device.DeviceInfo.Ma | true | FaultCode:9005FaultString:Invalid parameter name |
+			| empty | true | Name:Device.Writable:false |
+			| Device.DeviceInfo.Ma | true | FaultCode:9005FaultString:Invalid Parameter name |
 			| Device.SoftwareModules.ExecEnv. | true | Name:Device.SoftwareModules.ExecEnv.1.:false |
 			| Device.SoftwareModules.DeploymentUnit. | true | "Success" |

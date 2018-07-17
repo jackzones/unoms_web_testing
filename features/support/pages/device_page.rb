@@ -171,7 +171,7 @@ class DevicePage
 		test_gpn_element.wait_until_present.click
 		unless param == 'empty'
 			self.parameter_form = param
-			drop_down_form_element[param].click
+			drop_down_form_element[param].click if drop_down_form_element[param].exists?
 		end
 		next_level == 'true' ? check_next_level_form : uncheck_next_level_form
 		run
