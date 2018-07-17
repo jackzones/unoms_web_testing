@@ -4,5 +4,8 @@ module MainHelper
   def gen_random_str(len)
       rand(36 ** len).to_s(36)
   end
-  
+
+  def str_to_array(str)
+    str.split(",").map {|i| i.strip}
+  end
 end

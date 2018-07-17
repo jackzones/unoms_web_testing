@@ -1,3 +1,5 @@
+include MainHelper
+
 When /^click the icon of show and hide column$/ do
 	on_page(DevicePage).click_show_column_icon
 end
@@ -95,14 +97,23 @@ When /^对设备运行测试菜单下的GetParameterNames任务，参数为'(.+)
 	on_page(DevicePage).run_test_gpn(next_level, parameter)
 end
 
+# Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
+# 	unless result_msg =~ /,/
+# 		on_page(DevicePage).result.should include result_msg
+# 	else
+# 		result_msg = result_msg.split(",")
+# 		result_msg.each do |msg|
+# 			on_page(DevicePage).result.should include msg.strip
+# 		end
+# 	end
+# end
+
 Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
-	unless result_msg =~ /,/
+	result = MainHelper.str_to_array(result_msg)
+	if result.size == 1
 		on_page(DevicePage).result.should include result_msg
 	else
-		result_msg = result_msg.split(",")
-		result_msg.each do |msg|
-			on_page(DevicePage).result.should include msg.strip
-		end
+		result.each {|msg| on_page(DevicePage).result.should include msg}
 	end
 end
 

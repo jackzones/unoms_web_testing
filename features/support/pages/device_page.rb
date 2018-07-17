@@ -68,14 +68,20 @@ class DevicePage
 	#toolbar-test
 	div(:test_reboot, id: 'node_Test_Reboot', frame: iframe)
 	div(:test_gpn, id: 'node_Test_GetParameterNames', frame: iframe)
+	div(:test_gpv, id: 'node_Test_GetParameterValues', frame: iframe)
 	#reboot
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 
 	#toolbar form
 	label(:parameter_label, text: 'Parameter', frame: iframe)
 	text_field(:parameter_form, id: 'Parameter', frame: iframe)
+	text_field(:parameters_form, id: 'Parameters', frame: iframe)
 	checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
 	div(:result_form, class: %w(w2ui-page page-0), frame: iframe)
+	button(:add_item, id: 'Parameters_btn_add', frame: iframe)
+	button(:close_item, id: 'Parameters_btn_close', frame: iframe)
+	text_field(:name_item, id: 'Name_input', frame: iframe)
+	span(:name_label, class: 'drop-list-name', frame: iframe)
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
@@ -183,5 +189,19 @@ class DevicePage
 	def result
 	  result_form.tr("\n", "").strip
 	end
+
+	# def run_test_gpv(param)
+	# 	expand_toolbar
+	# 	test_gpn_element.wait_until_present.click
+	# 	parameters_form_element.wait_until_present.click
+	# 	if param == 'empty'
+	# 		add_item
+	# 	else
+	# 		self.name_item = param
+	# 		name_label_element.click
+	# 	end
+	# 	close_item
+	# 	run
+	# end
 
 end
