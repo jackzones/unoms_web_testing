@@ -45,3 +45,13 @@ Feature: 测试菜单里的RPC方法测试
 			| Device.DeviceInfo. | Name:Device.DeviceInfo.ModelNameType:stringValue:, Name:Device.DeviceInfo.ProductClassType:stringValue: |
 			# | empty | Name:Device.DeviceInfo.ManufacturerOUIWritable:false, Name:Device.ManagementServer.PeriodicInformEnableWritable:true |
 			# | Device.SoftwareModules.ExecEnv. | Name:Device.SoftwareModules.ExecEnv.1.Writable:false, Name:Device.SoftwareModules.ExecEnv.Writable:false, Name:Device.SoftwareModules.ExecEnv.1.NameWritable:false |
+
+	@test
+	Scenario Outline: RPC测试，GetParameterValues测试，结果为只含有。
+		When 对设备运行测试菜单下的GetParameterValues任务，参数为'<parameter>'
+		And 让序列号为'000000000100'的设备上线
+		Then RPC返回结果只有'<result_message>'
+
+		Examples:
+			| parameter | result_message |
+			| Device.Device. | FaultCode:9005FaultString:Invalid arguments |
