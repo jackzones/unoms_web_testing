@@ -2,6 +2,7 @@ require_relative '../simulator/simtr'
 
 class DevicePage
 	include PageObject
+	include MainHelper
 
 	in_iframe(css: 'div[id="menu_device_tab_content"] iframe') do |iframe|
 		# text_field(:address, id: 'address_id', frame: frame)
@@ -191,18 +192,36 @@ class DevicePage
 	end
 
 
-	# def run_test_gpv(param)
-	# 	expand_toolbar
-	# 	test_gpn_element.wait_until_present.click
-	# 	parameters_form_element.wait_until_present.click
-	# 	if param == 'empty'
-	# 		add_item
-	# 	else
-	# 		self.name_item = param
-	# 		name_label_element.click
-	# 	end
-	# 	close_item
-	# 	run
-	# end
+	def run_test_gpv(param)
+		expand_toolbar
+		test_gpn_element.wait_until_present.click
+		parameters_form_element.wait_until_present.click
+		if param == 'empty'
+			add_item
+		else
+			self.name_item = param
+			name_label_element.click
+		end
+		close_item
+		run
+	end
+
+	def run_test_gpv(param)
+		expand_toolbar
+		test_gpn_element.wait_until_present.click
+		parameters_form_element.wait_until_present.click
+		names = MainHelper.to_array_by_comma(param)
+		names.each do |name|
+			if name == 'empty'
+				add_item
+			else
+				self.name_item = name
+				name_label_element.click
+				add_item
+			end
+		end
+		close_item
+		run
+	end
 
 end

@@ -97,6 +97,12 @@ When /^对设备运行测试菜单下的GetParameterNames任务，参数为'(.+)
 	on_page(DevicePage).run_test_gpn(next_level, parameter)
 end
 
+When /^对设备运行测试菜单下的GetParameterValues任务，参数为'(.+)'$/ do |parameter|
+	visit_page(LoginPage)
+	navigate_to(DevicePage).select_device('auto_test0')
+	on_page(DevicePage).run_test_gpv(parameter)
+end
+
 
 Then /^RPC返回结果包含'(.+)'$/ do |result_msg|
 	MainHelper.to_array_by_comma(result_msg).each do |msg|
