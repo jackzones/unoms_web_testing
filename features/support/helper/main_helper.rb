@@ -5,7 +5,7 @@ module MainHelper
       rand(36 ** len).to_s(36)
   end
 
-  def str_to_array(str)
+  def to_array_by_comma(str)
     str.split(",").map {|i| i.strip}
   end
 end
