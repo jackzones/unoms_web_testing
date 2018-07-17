@@ -1,4 +1,5 @@
 require_relative '../simulator/simtr'
+require 'rspec'
 
 class DevicePage
 	include PageObject
