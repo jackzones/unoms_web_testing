@@ -166,11 +166,13 @@ class DevicePage
 		run
 	end
 
-	def run_test_gpn(param, next_level)
+	def run_test_gpn(next_level, param='')
 		expand_toolbar
 		test_gpn_element.wait_until_present.click
-		self.parameter_form = param
-		drop_down_form_element[param].click
+		unless param.empty?
+			self.parameter_form = param
+			drop_down_form_element[param].click
+		end
 		next_level == 'true' ? check_next_level_form : uncheck_next_level_form
 		run
 	end
