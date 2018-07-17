@@ -43,6 +43,8 @@ Feature: 测试菜单里的RPC方法测试
 		Examples:
 			| parameter | result_message |
 			| Device.DeviceInfo. | Name:Device.DeviceInfo.ModelNameType:stringValue:, Name:Device.DeviceInfo.ProductClassType:stringValue: |
+			| Device.DeviceInfo.ModelName, Device.DeviceInfo.ProductClass | Name:Device.DeviceInfo.ModelNameType:stringValue:, Name:Device.DeviceInfo.ProductClassType:stringValue: |
+
 			# | empty | Name:Device.DeviceInfo.ManufacturerOUIWritable:false, Name:Device.ManagementServer.PeriodicInformEnableWritable:true |
 			# | Device.SoftwareModules.ExecEnv. | Name:Device.SoftwareModules.ExecEnv.1.Writable:false, Name:Device.SoftwareModules.ExecEnv.Writable:false, Name:Device.SoftwareModules.ExecEnv.1.NameWritable:false |
 
