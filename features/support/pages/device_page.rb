@@ -208,11 +208,11 @@ class DevicePage
 		get_parameters(param)
 	end
 
-	def run_test_spv(param, param_key='')
+	def run_test_spv(param, param_key)
 	  expand_toolbar
 		test_spv_element.wait_until_present.click
 		parameters_form_element.wait_until_present.click
-		param_key_form = param_key unless param_key.empty?
+		param_key_form = param_key unless param_key == 'empty'
 		set_parameters(param)
 	end
 
