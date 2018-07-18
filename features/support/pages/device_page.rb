@@ -192,42 +192,21 @@ class DevicePage
 	  result_form.tr("\n", "").strip
 	end
 
-
-	def run_test_gpv(param)
-		expand_toolbar
-		test_gpn_element.wait_until_present.click
-		parameters_form_element.wait_until_present.click
-		if param == 'empty'
-			add_item
-		else
-			self.name_item = param
-			name_label_element.click
-		end
-		close_item
-		run
-	end
-
 	def run_test_gpv(param)
 		expand_toolbar
 		test_gpv_element.wait_until_present.click
-		parameters_form_element.wait_until_present.click
-		names = MainHelper.to_array_by_comma(param)
-		names.each do |name|
-			if name == 'empty'
-				add_item
-			else
-				self.name_item = name
-				name_label_element.click
-				add_item
-			end
-		end
-		close_item
-		run
+		get_parameters(param)
 	end
 
 	def run_test_gpa(param)
 		expand_toolbar
 		test_gpa_element.wait_until_present.click
+		get_parameters(param)
+	end
+
+	private
+
+	def get_parameters(param)
 		parameters_form_element.wait_until_present.click
 		names = MainHelper.to_array_by_comma(param)
 		names.each do |name|
