@@ -87,28 +87,25 @@ class DevicePage
 		span(:name_label, class: 'drop-list-name', frame: iframe)
 		text_field(:param_key_form, id: 'ParameterKey', frame: iframe)
 		text_field(:type_form, id: 'Type_input', frame: iframe)
-		# paragraph(:type_string, class: 'drop-option', frame: iframe)
 		text_field(:value_form, id: 'Value_input', frame: iframe)
 
 		div(:type_drop, id: 'Type_drop', frame: iframe)
 
-		type_list = {
+		#9 method for the drop list
+		type_drop_list = {
 			type_string: 0,
 			type_int: 1,
-			type_unsigned_int: 2
+			type_unsigned_int: 2,
+			type_long: 3,
+			type_unsigned_long: 4,
+			type_boolean: 5,
+			type_date_time: 6,
+			type_base64: 7,
+			type_hex_binary: 8
 		}
 
-		# paragraph(:type_string, frame: iframe) do |page|
-		# 	page.type_drop_element.paragraph_elements[0]
-		# end
-		# paragraph(:type_int, frame: iframe) do |page|
-		# 	page.type_drop_element.paragraph_elements[1]
-		# end
-		# paragraph(:type_unsigned_int, frame: iframe) do |page|
-		# 	page.type_drop_element.paragraph_elements[2]
-		# end
-
-		type_list.each do |key, value|
+		#nested div/paragraph
+		type_drop_list.each do |key, value|
 			paragraph(key, frame: iframe) do |page|
 				page.type_drop_element.paragraph_elements[value]
 			end
@@ -264,18 +261,36 @@ class DevicePage
 		element.each do |item|
 				self.name_item = item[0]
 				name_label_element.click
-				type_form_element.click
-				case item[1]
-				when 'string'
-					type_string_element.click
-				when 'unsignedInt'
-					type_unsigned_int_element.click
-				end
+				type_drop_select(item[1])
 				self.value_form = item[2]
 				add_item
 		end
 		close_item
 		run
+	end
+
+	def type_drop_select(type)
+		type_form_element.click
+		case type
+		when 'string'
+			type_string_element.click
+		when 'int'
+			type_int_element.click
+		when 'unsignedInt'
+			type_unsigned_int_element.click
+		when 'long'
+			type_long_element.click
+		when 'unsignedLong'
+			type_unsigned_long_element.click
+		when 'boolean'
+			type_boolean_element.click
+		when 'dateTime'
+			type_date_time_element.click
+		when 'base64'
+			type_base64_element.click
+		when 'hexBinary'
+			type_hex_binary_element.click 
+		end
 	end
 
 end
