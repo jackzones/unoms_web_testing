@@ -71,6 +71,7 @@ class DevicePage
 	div(:test_gpn, id: 'node_Test_GetParameterNames', frame: iframe)
 	div(:test_gpv, id: 'node_Test_GetParameterValues', frame: iframe)
 	div(:test_gpa, id: 'node_Test_GetParameterAttributes', frame: iframe)
+	div(:test_spv, id: 'node_Test_SetParameterValues', frame: iframe)
 	#reboot
 	div(:reboot_msg, id: 'resultMsg', frame: iframe)
 
@@ -84,6 +85,9 @@ class DevicePage
 	button(:close_item, id: 'Parameters_btn_close', frame: iframe)
 	text_field(:name_item, id: 'Name_input', frame: iframe)
 	span(:name_label, class: 'drop-list-name', frame: iframe)
+	text_field(:param_key_form, id: 'ParameterKey', frame: iframe)
+	select_list(:type_form, id: 'Type_input', frame: iframe)
+	text_field(:value_form, id: 'Value_input', frame: iframe)
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
@@ -204,6 +208,14 @@ class DevicePage
 		get_parameters(param)
 	end
 
+	def run_test_spv(param, param_key='')
+	  expand_toolbar
+		test_spv_element.wait_until_present.click
+		parameters_form_element.wait_until_present.click
+		param_key_form = param_key unless param_key.empty?
+		set_parameters(param)
+	end
+
 	private
 
 	def get_parameters(param)
@@ -217,6 +229,19 @@ class DevicePage
 				name_label_element.click
 				add_item
 			end
+		end
+		close_item
+		run
+	end
+
+	def set_parameters(param)
+		element = MainHelper.to_array_by_semicolon(param)
+		element.each do |item|
+				self.name_item = item[0]
+				name_label_element.click
+				self.type_form = item[1]
+				self.value_form = item[2]
+				add_item
 		end
 		close_item
 		run

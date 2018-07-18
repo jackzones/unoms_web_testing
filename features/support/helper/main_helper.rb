@@ -8,4 +8,13 @@ module MainHelper
   def to_array_by_comma(str)
     str.split(",").map {|i| i.strip}
   end
+
+  def to_array_by_semicolon(str)
+    a = []
+    to_array_by_comma(str).each do |item|
+      a << item.split(":").map {|i| i.strip}
+    end
+    a
+  end
+
 end
