@@ -6,89 +6,94 @@ class DevicePage
 
 	in_iframe(css: 'div[id="menu_device_tab_content"] iframe') do |iframe|
 		# text_field(:address, id: 'address_id', frame: frame)
-	device_column = { subscriber_name_column: 'grid_device_column_1',
-						subscriber_id_column: 'grid_device_column_2',
-						serial_number_column: 'grid_device_column_3',
-						oui_column: 'grid_device_column_4',
-						product_class_column: 'grid_device_column_5',
-						manufacturer_column: 'grid_device_column_6',
-						model_column: 'grid_device_column_7',
-						ip_address_column: 'grid_device_column_8',
-						mac_address_column: 'grid_device_column_9',
-						last_on_line_time_column: 'grid_device_column_10',
-						firmware_version_column: 'grid_device_column_11',
-						no_of_inform_column: 'grid_device_column_12',
-						domain_column: 'grid_device_column_13',
-						tags_column: 'grid_device_column_14'
-					}
-	device_column.each do |key, value|
-		cell(key, :id => value, frame: iframe)
-	end
-	#icon of the devicepage
-	table(:reload_icon, class: 'w2ui-button', index: 0, frame: iframe)
-	table(:show_column_icon, class: 'w2ui-button', index: 1, frame: iframe)
-	table(:search_icon, class: 'w2ui-button', index: 2, frame: iframe)
-	table(:add_new_icon, class: 'w2ui-button', index: 3, frame: iframe)
-	table(:detect_icon, class: 'w2ui-button', index: 6, frame: iframe)
-	#the label of the show_column_icon
-	label(:show_subscriber_name, text: 'Subscriber Name', frame: iframe)
-	label(:show_subscriber_id, text: 'Subscriber ID', frame: iframe)
+		device_column = { subscriber_name_column: 'grid_device_column_1',
+							subscriber_id_column: 'grid_device_column_2',
+							serial_number_column: 'grid_device_column_3',
+							oui_column: 'grid_device_column_4',
+							product_class_column: 'grid_device_column_5',
+							manufacturer_column: 'grid_device_column_6',
+							model_column: 'grid_device_column_7',
+							ip_address_column: 'grid_device_column_8',
+							mac_address_column: 'grid_device_column_9',
+							last_on_line_time_column: 'grid_device_column_10',
+							firmware_version_column: 'grid_device_column_11',
+							no_of_inform_column: 'grid_device_column_12',
+							domain_column: 'grid_device_column_13',
+							tags_column: 'grid_device_column_14'
+						}
+		device_column.each do |key, value|
+			cell(key, :id => value, frame: iframe)
+		end
+		#icon of the devicepage
+		table(:reload_icon, class: 'w2ui-button', index: 0, frame: iframe)
+		table(:show_column_icon, class: 'w2ui-button', index: 1, frame: iframe)
+		table(:search_icon, class: 'w2ui-button', index: 2, frame: iframe)
+		table(:add_new_icon, class: 'w2ui-button', index: 3, frame: iframe)
+		table(:detect_icon, class: 'w2ui-button', index: 6, frame: iframe)
+		#the label of the show_column_icon
+		label(:show_subscriber_name, text: 'Subscriber Name', frame: iframe)
+		label(:show_subscriber_id, text: 'Subscriber ID', frame: iframe)
 
-	#add device form
-	text_field(:name_form, id: 'name', frame: iframe)
-	text_field(:serial_number_form, id: 'serial_number', frame: iframe)
-	text_field(:protocol_form, id: 'protocol', frame: iframe)
-	button(:save_form, name: 'save', frame: iframe)
+		#add device form
+		text_field(:name_form, id: 'name', frame: iframe)
+		text_field(:serial_number_form, id: 'serial_number', frame: iframe)
+		text_field(:protocol_form, id: 'protocol', frame: iframe)
+		button(:save_form, name: 'save', frame: iframe)
 
-	#combo dropdown list
-	table(:drop_down_form, class: 'w2ui-drop-menu', frame: iframe)
+		#combo dropdown list
+		table(:drop_down_form, class: 'w2ui-drop-menu', frame: iframe)
 
-	#device list table
-	table(:device_list_1, id: 'grid_device_frecords', frame: iframe)
-	table(:device_list_2, class: 'grid_device_records', frame: iframe)
+		#device list table
+		table(:device_list_1, id: 'grid_device_frecords', frame: iframe)
+		table(:device_list_2, class: 'grid_device_records', frame: iframe)
 
-	#detect
-	button(:no_auth_button, id: 'HttpWithoutAuth', frame: iframe)
-	button(:basic_button, id: 'HttpWithBasicAuth', frame: iframe)
-	button(:digest_button, id: 'HttpWithDigest', frame: iframe)
-	button(:detect_next, id: 'dectect_device_next_btn', frame: iframe)
-	text_area(:detect_url, id: 'url', frame: iframe)
-	text_field(:detect_username, id: 'username', frame: iframe)
-	text_field(:detect_password, id: 'password', frame: iframe)
-	text_field(:detect_device_name, id: 'name', frame: iframe)
-	text_field(:detect_subscriber_id, id: 'subscriber_id', frame: iframe)
+		#detect
+		button(:no_auth_button, id: 'HttpWithoutAuth', frame: iframe)
+		button(:basic_button, id: 'HttpWithBasicAuth', frame: iframe)
+		button(:digest_button, id: 'HttpWithDigest', frame: iframe)
+		button(:detect_next, id: 'dectect_device_next_btn', frame: iframe)
+		text_area(:detect_url, id: 'url', frame: iframe)
+		text_field(:detect_username, id: 'username', frame: iframe)
+		text_field(:detect_password, id: 'password', frame: iframe)
+		text_field(:detect_device_name, id: 'name', frame: iframe)
+		text_field(:detect_subscriber_id, id: 'subscriber_id', frame: iframe)
 
-	div(:page_footer, class: 'w2ui-footer-right', frame: iframe)
+		div(:page_footer, class: 'w2ui-footer-right', frame: iframe)
 
-	#toolbar
-	div(:toolbar_icon, class: 'w2ui-flat-right', frame: iframe)
-	#toolbar-diagnostics
-	div(:diagnostic_reboot, id: 'node_Reboot', frame: iframe)
-	button(:run, class: 'w2ui-btn', name: 'run', frame: iframe)
+		#toolbar
+		div(:toolbar_icon, class: 'w2ui-flat-right', frame: iframe)
+		#toolbar-diagnostics
+		div(:diagnostic_reboot, id: 'node_Reboot', frame: iframe)
+		button(:run, class: 'w2ui-btn', name: 'run', frame: iframe)
 
-	#toolbar-test
-	div(:test_reboot, id: 'node_Test_Reboot', frame: iframe)
-	div(:test_gpn, id: 'node_Test_GetParameterNames', frame: iframe)
-	div(:test_gpv, id: 'node_Test_GetParameterValues', frame: iframe)
-	div(:test_gpa, id: 'node_Test_GetParameterAttributes', frame: iframe)
-	div(:test_spv, id: 'node_Test_SetParameterValues', frame: iframe)
-	#reboot
-	div(:reboot_msg, id: 'resultMsg', frame: iframe)
+		#toolbar-test
+		div(:test_reboot, id: 'node_Test_Reboot', frame: iframe)
+		div(:test_gpn, id: 'node_Test_GetParameterNames', frame: iframe)
+		div(:test_gpv, id: 'node_Test_GetParameterValues', frame: iframe)
+		div(:test_gpa, id: 'node_Test_GetParameterAttributes', frame: iframe)
+		div(:test_spv, id: 'node_Test_SetParameterValues', frame: iframe)
+		#reboot
+		div(:reboot_msg, id: 'resultMsg', frame: iframe)
 
-	#toolbar form
-	label(:parameter_label, text: 'Parameter', frame: iframe)
-	text_field(:parameter_form, id: 'Parameter', frame: iframe)
-	text_field(:parameters_form, id: 'Parameters', frame: iframe)
-	checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
-	div(:result_form, class: %w(w2ui-page page-0), frame: iframe)
-	button(:add_item, id: 'Parameters_btn_add', frame: iframe)
-	button(:close_item, id: 'Parameters_btn_close', frame: iframe)
-	text_field(:name_item, id: 'Name_input', frame: iframe)
-	span(:name_label, class: 'drop-list-name', frame: iframe)
-	text_field(:param_key_form, id: 'ParameterKey', frame: iframe)
-	text_field(:type_form, id: 'Type_input', frame: iframe)
-	paragraph(:type_string, class: 'drop-option', frame: iframe)
-	text_field(:value_form, id: 'Value_input', frame: iframe)
+		#toolbar form
+		label(:parameter_label, text: 'Parameter', frame: iframe)
+		text_field(:parameter_form, id: 'Parameter', frame: iframe)
+		text_field(:parameters_form, id: 'Parameters', frame: iframe)
+		checkbox(:next_level_form, id: 'NextLevel', frame: iframe)
+		div(:result_form, class: %w(w2ui-page page-0), frame: iframe)
+		button(:add_item, id: 'Parameters_btn_add', frame: iframe)
+		button(:close_item, id: 'Parameters_btn_close', frame: iframe)
+		text_field(:name_item, id: 'Name_input', frame: iframe)
+		span(:name_label, class: 'drop-list-name', frame: iframe)
+		text_field(:param_key_form, id: 'ParameterKey', frame: iframe)
+		text_field(:type_form, id: 'Type_input', frame: iframe)
+		# paragraph(:type_string, class: 'drop-option', frame: iframe)
+		text_field(:value_form, id: 'Value_input', frame: iframe)
+
+		div(:type_drop, id: 'Type_drop', frame: iframe)
+		paragraph(:type_string, frame: iframe) do |page|
+			page.type_drop_element.paragraph_element
+		end
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
