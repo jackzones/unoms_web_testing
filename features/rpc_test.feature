@@ -34,7 +34,7 @@ Feature: 测试菜单里的RPC方法测试
 			| Device.SoftwareModules.DeploymentUnit. | true | Success |
 			| Device.DeviceInfo.ManufacturerOUI | true | FaultCode:9003FaultString:Invalid arguments |
 
-
+	@test
 	Scenario Outline: RPC测试，GetParameterValues测试，结果为包含。
 		When 对设备运行测试菜单下的GetParameterValues任务，参数为'<parameter>'
 		And 让序列号为'000000000100'的设备上线
@@ -43,11 +43,15 @@ Feature: 测试菜单里的RPC方法测试
 		Examples:
 			| parameter | result_message |
 			| Device.DeviceInfo. | Name:Device.DeviceInfo.ModelNameType:stringValue:, Name:Device.DeviceInfo.ProductClassType:stringValue: |
+			| Device.DeviceInfo.ModelName | Name:Device.DeviceInfo.ModelNameType:stringValue: |
 			| Device.DeviceInfo.ModelName, Device.DeviceInfo.ProductClass | Name:Device.DeviceInfo.ModelNameType:stringValue:, Name:Device.DeviceInfo.ProductClassType:stringValue: |
+			| empty | Device.DeviceInfo.ModelName, Device.ManagementServer.Username, Device.SoftwareModules.DeploymentUnitNumberOfEntries, Device.LAN.IPAddress |
+			| Device.DeviceInfo.ModelName, Device.DeviceInfo.ModelName | Name:Device.DeviceInfo.ModelNameType:stringValue: |
 
 			# | empty | Name:Device.DeviceInfo.ManufacturerOUIWritable:false, Name:Device.ManagementServer.PeriodicInformEnableWritable:true |
 			# | Device.SoftwareModules.ExecEnv. | Name:Device.SoftwareModules.ExecEnv.1.Writable:false, Name:Device.SoftwareModules.ExecEnv.Writable:false, Name:Device.SoftwareModules.ExecEnv.1.NameWritable:false |
 
+	@test
 	Scenario Outline: RPC测试，GetParameterValues测试，结果为只含有。
 		When 对设备运行测试菜单下的GetParameterValues任务，参数为'<parameter>'
 		And 让序列号为'000000000100'的设备上线
@@ -56,9 +60,13 @@ Feature: 测试菜单里的RPC方法测试
 		Examples:
 			| parameter | result_message |
 			| Device.Device. | FaultCode:9005FaultString:Invalid parameter name |
+			| Device.Device | FaultCode:9005FaultString:Invalid parameter name |
+			| Device.DeviceInfo.ModelName, Device.DeviceInfo.Pro | FaultCode:9005FaultString:Invalid parameter name |
+			| Device.SoftwareModules.DeploymentUnit | Success |
+			| Device.ManagementServer.Password | Name:Device.ManagementServer.PasswordType:stringValue: |
 
 
-	@test
+
 	Scenario Outline: RPC测试，GetParameterAttributes测试，结果为包含。
 		When 对设备运行测试菜单下的GetParameterAttributes任务，参数为'<parameter>'
 		And 让序列号为'000000000100'的设备上线
@@ -72,7 +80,6 @@ Feature: 测试菜单里的RPC方法测试
 			# | empty | Name:Device.DeviceInfo.ManufacturerOUIWritable:false, Name:Device.ManagementServer.PeriodicInformEnableWritable:true |
 			# | Device.SoftwareModules.ExecEnv. | Name:Device.SoftwareModules.ExecEnv.1.Writable:false, Name:Device.SoftwareModules.ExecEnv.Writable:false, Name:Device.SoftwareModules.ExecEnv.1.NameWritable:false |
 
-	@test
 	Scenario Outline: RPC测试，GetParameterAttributes测试，结果为只含有。
 		When 对设备运行测试菜单下的GetParameterAttributes任务，参数为'<parameter>'
 		And 让序列号为'000000000100'的设备上线
