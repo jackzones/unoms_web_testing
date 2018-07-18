@@ -86,7 +86,8 @@ class DevicePage
 	text_field(:name_item, id: 'Name_input', frame: iframe)
 	span(:name_label, class: 'drop-list-name', frame: iframe)
 	text_field(:param_key_form, id: 'ParameterKey', frame: iframe)
-	select_list(:type_form, id: 'Type_input', frame: iframe)
+	text_field(:type_form, id: 'Type_input', frame: iframe)
+	paragraph(:type_string, class: 'drop-option', frame: iframe)
 	text_field(:value_form, id: 'Value_input', frame: iframe)
 	end
 
@@ -239,7 +240,8 @@ class DevicePage
 		element.each do |item|
 				self.name_item = item[0]
 				name_label_element.click
-				self.type_form = item[1]
+				type_form_element.click
+				type_string_element.click
 				self.value_form = item[2]
 				add_item
 		end
