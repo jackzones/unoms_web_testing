@@ -92,7 +92,10 @@ class DevicePage
 
 		div(:type_drop, id: 'Type_drop', frame: iframe)
 		paragraph(:type_string, frame: iframe) do |page|
-			page.type_drop_element.paragraph_element
+			page.type_drop_element.paragraph_elements[0]
+		end
+		paragraph(:type_unsigned_int, frame: iframe) do |page|
+			page.type_drop_element.paragraph_elements[2]
 		end
 	end
 
@@ -246,7 +249,12 @@ class DevicePage
 				self.name_item = item[0]
 				name_label_element.click
 				type_form_element.click
-				type_string_element.click
+				case item[1]
+				when 'string'
+					type_string_element.click
+				when 'unsignedInt'
+					type_unsigned_int_element.click
+				end
 				self.value_form = item[2]
 				add_item
 		end

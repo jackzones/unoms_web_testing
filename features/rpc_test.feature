@@ -97,7 +97,7 @@ Feature: 测试菜单里的RPC方法测试
 		Examples:
 			| parameter | key |result_message |
 			| Device.DeviceInfo.ProvisioningCode:string:22 | empty | Status: |
-			| Device.DeviceInfo.ProvisioningCode:string:22, Device.ManagementServer.PeriodicInformInterval:unsignedInt:20 | empty | Status: |
+			# | Device.DeviceInfo.ProvisioningCode:string:22, Device.ManagementServer.PeriodicInformInterval:unsignedInt:20 | empty | Status: |
 	# 		| Device.DeviceInfo.ModelName | Name:Device.DeviceInfo.ModelNameType:stringValue: |
 	# 		| Device.DeviceInfo.ModelName, Device.DeviceInfo.ProductClass | Name:Device.DeviceInfo.ModelNameType:stringValue:, Name:Device.DeviceInfo.ProductClassType:stringValue: |
 	# 		| empty | Device.DeviceInfo.ModelName, Device.ManagementServer.Username, Device.SoftwareModules.DeploymentUnitNumberOfEntries, Device.LAN.IPAddress |
