@@ -91,12 +91,29 @@ class DevicePage
 		text_field(:value_form, id: 'Value_input', frame: iframe)
 
 		div(:type_drop, id: 'Type_drop', frame: iframe)
-		paragraph(:type_string, frame: iframe) do |page|
-			page.type_drop_element.paragraph_elements[0]
+
+		type_list = {
+			type_string: 0,
+			type_int: 1,
+			type_unsigned_int: 2
+		}
+
+		# paragraph(:type_string, frame: iframe) do |page|
+		# 	page.type_drop_element.paragraph_elements[0]
+		# end
+		# paragraph(:type_int, frame: iframe) do |page|
+		# 	page.type_drop_element.paragraph_elements[1]
+		# end
+		# paragraph(:type_unsigned_int, frame: iframe) do |page|
+		# 	page.type_drop_element.paragraph_elements[2]
+		# end
+
+		type_list.each do |key, value|
+			paragraph(key, frame: iframe) do |page|
+				page.type_drop_element.paragraph_elements[value]
+			end
 		end
-		paragraph(:type_unsigned_int, frame: iframe) do |page|
-			page.type_drop_element.paragraph_elements[2]
-		end
+
 	end
 
 	#click_a=>a_element.wait a_element.click ####抽象
@@ -111,19 +128,18 @@ class DevicePage
 
     end
 
-    ##click the icon of devicepage
-    click :click_show_column_icon
-    click :click_search_icon
-    click :click_reload_icon
-    click :click_add_new_icon
-    click :click_detect_icon
+  ##click the icon of devicepage
+  click :click_show_column_icon
+  click :click_search_icon
+  click :click_reload_icon
+  click :click_add_new_icon
+  click :click_detect_icon
 
+  ##click the label of the show_column_icon
+  click :click_show_subscriber_name
+  click :click_show_subscriber_id
 
-    ##click the label of the show_column_icon
-    click :click_show_subscriber_name
-    click :click_show_subscriber_id
-
-		click :click_parameter_label
+	click :click_parameter_label
 
 	def iframe_text
 		self.iframe(index: 1).text
