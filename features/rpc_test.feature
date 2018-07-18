@@ -59,10 +59,10 @@ Feature: 测试菜单里的RPC方法测试
 
 		Examples:
 			| parameter | result_message |
-			| Device.Device. | FaultCode:9005FaultString:Invalid parameter name |
-			| Device.Device | FaultCode:9005FaultString:Invalid parameter name |
-			| Device.DeviceInfo.ModelName, Device.DeviceInfo.Pro | FaultCode:9005FaultString:Invalid parameter name |
-			| Device.SoftwareModules.DeploymentUnit | Success |
+			| Device.Error. | FaultCode:9005FaultString:Invalid parameter name |
+			| Device.Error | FaultCode:9005FaultString:Invalid parameter name |
+			| Device.DeviceInfo.ModelName, Device.DeviceInfo.Error | FaultCode:9005FaultString:Invalid parameter name |
+			| Device.SoftwareModules.DeploymentUnit. | Success |
 			| Device.ManagementServer.Password | Name:Device.ManagementServer.PasswordType:stringValue: |
 
 
