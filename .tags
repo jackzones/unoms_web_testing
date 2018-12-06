@@ -56,3 +56,4 @@ run_test_spv	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/devi
 get_parameters	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def get_parameters(param)$/;"	method	line:243
 set_parameters	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def set_parameters(param)$/;"	method	line:259
 type_drop_select	/Users/jackzones/Wing/unoms_web_testing/features/support/pages/device_page.rb	/^	def type_drop_select(type)$/;"	method	line:272
+ConfigHelper	/Users/jackzones/Wing/unoms_web_testing/features/support/helper/config_helper.rb	/^module ConfigHelper$/;"	module	line:1

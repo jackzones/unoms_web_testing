@@ -1,11 +1,22 @@
 class SimTR
+  include ConfigHelper
 
   attr_accessor :app_conf_file, :digest_url_without_rkey, :license_file
 
+  # def initialize(
+  #   app_conf_file='/home/nelson/unotr/conf/app.conf',
+  #   digest_url_without_rkey='http://127.0.0.1/sbi/cwmp/digest',
+  #   license_file = "/home/nelson/Documents/unoms_web_testing/features/support/resource/ubuntu_auto_CWMP.lic"
+  # )
+  #   @app_conf_file = app_conf_file
+  #   @digest_url_without_rkey = digest_url_without_rkey
+  #   @license_file = license_file
+  # end
+
   def initialize(
-    app_conf_file='/home/nelson/unotr/conf/app.conf',
-    digest_url_without_rkey='http://127.0.0.1/sbi/cwmp/digest',
-    license_file = "/home/nelson/Documents/unoms_web_testing/features/support/resource/ubuntu_auto_CWMP.lic"
+    app_conf_file=ConfigHelper::TRAppConfigFile,
+    digest_url_without_rkey=ConfigHelper::DigestUrlWithoutRkey,
+    license_file=ConfigHelper::LicenseFile
   )
     @app_conf_file = app_conf_file
     @digest_url_without_rkey = digest_url_without_rkey
